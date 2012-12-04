@@ -20,17 +20,17 @@ Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 // disable default dashboard widgets
 function disable_default_dashboard_widgets() {
 	// remove_meta_box('dashboard_right_now', 'dashboard', 'core');    // Right Now Widget
-	remove_meta_box('dashboard_recent_comments', 'dashboard', 'core'); // Comments Widget
-	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  // Incoming Links Widget
+	//remove_meta_box('dashboard_recent_comments', 'dashboard', 'core'); // Comments Widget
+	//remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  // Incoming Links Widget
 	remove_meta_box('dashboard_plugins', 'dashboard', 'core');         // Plugins Widget
 
-	// remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  // Quick Press Widget
-	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');   // Recent Drafts Widget
+	//remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  // Quick Press Widget
+	//remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');   // Recent Drafts Widget
 	remove_meta_box('dashboard_primary', 'dashboard', 'core');         //
 	remove_meta_box('dashboard_secondary', 'dashboard', 'core');       //
 
 	// removing plugin dashboard boxes
-	remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
+	//remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
 
 	/*
 	have more plugin widgets you'd like to remove?
@@ -55,7 +55,7 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
 function bones_rss_dashboard_widget() {
 	if(function_exists('fetch_feed')) {
 		include_once(ABSPATH . WPINC . '/feed.php');               // include the required file
-		$feed = fetch_feed('http://themble.com/feed/rss/');        // specify the source feed
+		$feed = fetch_feed('http://www.dmsqd.com/blog/?feed=rss2');        // specify the source feed
 		$limit = $feed->get_item_quantity(7);                      // specify number of items
 		$items = $feed->get_items(0, $limit);                      // create an array of items
 	}
@@ -119,8 +119,9 @@ you like.
 */
 
 // Custom Backend Footer
+// Custom Backend Footer
 function bones_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
+	echo 'Crafted by <a href="http://www.dmsqd.com"><strong>DMS</strong>QUARED</a>. Support - 01226 733 501';
 }
 
 // adding it to the admin area
