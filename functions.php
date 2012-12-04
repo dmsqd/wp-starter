@@ -161,4 +161,29 @@ function bones_wpsearch($form) {
 
 add_post_type_support( 'page', 'excerpt' );
 
+/************* ADD FEATURED IMAGE BODY CLASS *****************/
+
+//Adds a body class ‘has-featured-image’ if the current post has a featured image assigned.
+
+add_action('body_class', 'dm2_if_featured_image_class' );
+
+function dm2_if_featured_image_class($classes) {
+    if ( has_post_thumbnail() ) {
+        array_push($classes, 'has-featured-image');
+    }
+    return $classes;
+}
+
+/************* ADD MENU NAME CLASS *****************/
+
+//Adds a class to each menu item with the name of the item.
+//Handy for styling individual menu items.
+
+add_filter('nav_menu_css_class' , 'ed_page_title_class' , 10 , 2);
+
+function ed_page_title_class($classes, $item){
+    $classes[] = sanitize_title('menu-item-' . $item->title);
+    return $classes;
+}
+
 ?>
