@@ -235,7 +235,7 @@ and more scalable.
 	li.current_page_item,
 	li.current-page-ancestor {
 
-		a {}
+		& > a {}
 
 	}  /* end current highlighters */
 
