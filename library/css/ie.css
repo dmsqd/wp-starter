@@ -373,9 +373,8 @@ NAVIGATION STYLES
       .nav li ul.sub-menu li,
       .nav li ul.children li {
         /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
+        Third plus level menus - go as deep as you like,
+        I got your back bro
         */ }
         .nav li ul.sub-menu li a,
         .nav li ul.children li a {
@@ -387,6 +386,15 @@ NAVIGATION STYLES
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          display: none;
+          margin-left: 100%;
+          top: 5px; }
+        .nav li ul.sub-menu li:hover > ul,
+        .nav li ul.children li:hover > ul {
+          left: auto;
+          display: block; }
     .nav li:hover ul {
       top: auto;
       display: block; }
