@@ -106,3 +106,49 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+
+//Placeholder fallback for older IE browsers
+//Use the standard placeholder as normal, this will do the rest
+
+jQuery(document).ready(function() {
+	placeholderFallback();
+});
+
+// HTML5 Fallbacks for older browsers
+function placeholderFallback() {
+	// check placeholder browser support
+	if (!Modernizr.input.placeholder) {
+
+		// set placeholder values
+		jQuery('input').each(function() {
+			if ( jQuery(this).attr('placeholder') ) {
+				jQuery(this).val( jQuery(this).attr('placeholder') );
+			}
+		});
+		
+		// focus and blur of placeholders
+		jQuery('[placeholder]').focus(function() {
+			if (jQuery(this).val() == jQuery(this).attr('placeholder')) {
+				jQuery(this).val('');
+				jQuery(this).removeClass('placeholder');
+			}
+		}).blur(function() {
+			if (jQuery(this).val() == '' || jQuery(this).val() == jQuery(this).attr('placeholder')) {
+				jQuery(this).val(jQuery(this).attr('placeholder'));
+				jQuery(this).addClass('placeholder');
+			}
+		});
+		
+		// remove placeholders on submit
+		jQuery('[placeholder]').closest('form').submit(function() {
+			jQuery(this).find('[placeholder]').each(function() {
+				if (jQuery(this).val() == jQuery(this).attr('placeholder')) {
+					jQuery(this).val('');
+				}
+			});
+		});
+	}
+}
+
+
