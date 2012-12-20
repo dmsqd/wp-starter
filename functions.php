@@ -186,4 +186,30 @@ function ed_page_title_class($classes, $item){
     return $classes;
 }
 
+/*************** CUSTOM EXCERPT LENGTH *************/
+
+//Make the_excerpt your bitch
+//Allows custom excerpt lenght to be set for each occurrence 
+
+function my_excerpt_length() {
+	global $myExcerptLength;
+	
+	if ($myExcerptLength) {
+	    return $myExcerptLength;
+	} else {
+	    return 55; //default excerpt length
+	    }
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+/*
+Replace the_excerpt(); with the following:
+
+<?php 
+$myExcerptLength=25;		//Define the word count for the excerpt in question
+echo get_the_excerpt();
+$myExcerptLength=0;?>
+
+*/
+
 ?>
