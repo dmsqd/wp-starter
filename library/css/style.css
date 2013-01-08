@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Main Stylesheet
 
@@ -470,7 +470,7 @@ dd {
 
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -725,7 +725,7 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 */
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -1183,15 +1183,15 @@ tweeners.
 */
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author: DMSQUARED
   
   Stylesheet: 481px and Up Stylesheet
   
-  This stylesheet is loaded for larger devices. It's set to 
+  This stylesheet is loaded for larger devices. It's set to
   481px because at 480px it would load on a landscaped iPhone.
   This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection. 
+  extra styles on that same mobile connection.
   
   A word of warning. This size COULD be a larger mobile device,
   so you still want to keep it pretty light and simply expand
@@ -1257,7 +1257,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 768px) {
   /******************************************************************
   Site Name:
-  Author:
+  Author: DMSQUARED
   
   Stylesheet: Grid Stylesheet
   
@@ -1342,7 +1342,7 @@ you can add resource intensive styles.
 
   /******************************************************************
   Site Name:
-  Author:
+  Author: DMSQUARED
   
   Stylesheet: Tablet & Small Desktop Stylesheet
   
@@ -1483,13 +1483,13 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author: DMSQUARED
   
   Stylesheet: Desktop Stylsheet
   
   This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop. 
+  be seen on the Desktop.
   
   ******************************************************************/ }
 /*
@@ -1498,8 +1498,8 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author: DMSQUARED
   
   Stylesheet: Super Large Monitor Stylesheet
   
@@ -1515,8 +1515,8 @@ query for retina AND a certain size if you want. Go Nuts.
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name:
+  Author: DMSQUARED
   
   Stylesheet: Retina Screens & Devices Stylesheet
   
@@ -1525,9 +1525,9 @@ query for retina AND a certain size if you want. Go Nuts.
   place.
   
   ******************************************************************/
-  /* 
+  /*
   
-  EXAMPLE 
+  EXAMPLE
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
@@ -1548,10 +1548,10 @@ query for retina AND a certain size if you want. Go Nuts.
   	background-size: 24px 24px;
   }
   
-  So, you would create the same icon, but at double the resolution, meaning 
+  So, you would create the same icon, but at double the resolution, meaning
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
+  the original dimensions and you are good to go.
   
   */ }
 /*
@@ -1567,7 +1567,7 @@ be set to display none.
 @media print {
   /******************************************************************
   Site Name:
-  Author:
+  Author: DMSQUARED
   
   Stylesheet: Print Stylesheet
   

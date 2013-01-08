@@ -14,7 +14,6 @@
 
 							    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-
 						    </header> <!-- end article header -->
 
 						    <section class="entry-content clearfix" itemprop="articleBody">
@@ -23,7 +22,7 @@
 
 						    <footer class="article-footer">
 
-							    <?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+							    <?php //the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 
 						    </footer> <!-- end article footer -->
 

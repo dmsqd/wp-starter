@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: IE Stylesheet
 
@@ -19,7 +19,7 @@ import the mixins file so SASS can understand the variables.
 /* import mixins */
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -268,7 +268,7 @@ BUTTONS
 
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Grid Stylesheet
 
@@ -352,15 +352,15 @@ I've also included grid mixins to use anywhere in _mixins.scss
   float: right; }
 
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author: DMSQUARED
 
 Stylesheet: 481px and Up Stylesheet
 
-This stylesheet is loaded for larger devices. It's set to 
+This stylesheet is loaded for larger devices. It's set to
 481px because at 480px it would load on a landscaped iPhone.
 This isn't ideal because then you would be loading all those
-extra styles on that same mobile connection. 
+extra styles on that same mobile connection.
 
 A word of warning. This size COULD be a larger mobile device,
 so you still want to keep it pretty light and simply expand
@@ -419,7 +419,7 @@ do they need tweaking?
 /* end .footer-links */
 /******************************************************************
 Site Name:
-Author:
+Author: DMSQUARED
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -553,13 +553,13 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 /******************************************************************
-Site Name: 
-Author: 
+Site Name:
+Author: DMSQUARED
 
 Stylesheet: Desktop Stylsheet
 
 This is the desktop size. It's larger than an iPad so it will only
-be seen on the Desktop. 
+be seen on the Desktop.
 
 ******************************************************************/
 /*

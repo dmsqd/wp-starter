@@ -1,7 +1,7 @@
 <?php
 /*
-Author: Eddie Machado
-URL: htp://themble.com/bones/
+Author: DMSQUARED DMSQUARED
+URL: htp://dmsqd.com/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -30,7 +30,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
     - example custom taxonomy (like categories)
     - example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
+//require_once('library/custom-post-type.php'); // you can disable this if you like
 /*
 3. library/admin.php
     - removing some default WordPress dashboard widgets
@@ -71,13 +71,23 @@ you like. Enjoy!
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
     register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => 'Sidebar 1',
-    	'description' => 'The first (primary) sidebar.',
+    	'id' => 'page-sidebar',
+    	'name' => 'Default Sidebar',
+    	'description' => 'Sidebar shown on pages.',
     	'before_widget' => '<div id="%1$s" class="widget %2$s">',
     	'after_widget' => '</div>',
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'id' => 'blog-sidebar',
+        'name' => 'Blog Sidebar',
+        'description' => 'Sidebar shown on blog pages.',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
     ));
 
     /*
@@ -151,7 +161,7 @@ function bones_comments($comment, $args, $depth) {
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
     <label class="screen-reader-text" for="s">' . __('Search for:', 'dmsqdtheme') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','bonestheme').'" />
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...', 'dmsqdtheme').'" />
     <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
     </form>';
     return $form;
@@ -189,11 +199,11 @@ function ed_page_title_class($classes, $item){
 /*************** CUSTOM EXCERPT LENGTH *************/
 
 //Make the_excerpt your bitch
-//Allows custom excerpt lenght to be set for each occurrence 
+//Allows custom excerpt lenght to be set for each occurrence
 
 function my_excerpt_length() {
 	global $myExcerptLength;
-	
+
 	if ($myExcerptLength) {
 	    return $myExcerptLength;
 	} else {
@@ -205,7 +215,7 @@ add_filter('excerpt_length', 'my_excerpt_length');
 /*
 Replace the_excerpt(); with the following:
 
-<?php 
+<?php
 $myExcerptLength=25;		//Define the word count for the excerpt in question
 echo get_the_excerpt();
 $myExcerptLength=0;?>

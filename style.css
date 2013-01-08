@@ -2,7 +2,7 @@
 Theme Name: wp-starter (Rename Me!)
 Theme URI: http://www.dmsqd.com/
 Description: Add a description of the theme here.
-Author: DMSQD
+Author: DMSQUARED
 Author URI: http://www.dmsqd.com
 Version: 1.3
 Tags: flexble-width, translation-ready, microformats, rtl-language-support
@@ -14,6 +14,6 @@ Are You Serious? Yes.
 
 ALL THE STYLES ARE IN library/css
 
-If you want SASS/LESS, use the folder in library and delete the one you don't want. If you don't, delete the scss and less directories so we don't overwrite each other.
+If you want SASS, use the folder in library and delete the one you don't want. If you don't, delete the scss directory so we don't overwrite each other.
 
 ******************************************************************/
