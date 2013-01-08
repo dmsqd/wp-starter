@@ -520,6 +520,26 @@ use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
 /*********************
+GRID MIXINS
+Use grids anywhere!
+Grid classes are separate in _grid.scss so they can be included on demand.
+--
+Please use classes where you can, but if you need to swap the number of columns an item uses
+more than once you'll have to include them.
+*********************/
+/* 4.85%;  } /* grid_1  */
+/* 13.45%; } /* grid_2  */
+/* 22.05%; } /* grid_3  */
+/* 30.75%; } /* grid_4  */
+/* 39.45%; } /* grid_5  */
+/* 48%;    } /* grid_6  */
+/* 56.75%; } /* grid_7  */
+/* 65.4%;  } /* grid_8  */
+/* 74.05%; } /* grid_9  */
+/* 82.7%;  } /* grid_10 */
+/* 91.35%; } /* grid_11 */
+/* 100%;   } /* grid_12 */
+/*********************
 TYPOGRAPHY
 *********************/
 /* 	To embed your own fonts, use this syntax
@@ -1251,10 +1271,14 @@ you can add resource intensive styles.
   http://susy.oddbird.net/ - Grids using Compass. Very elegant.
   http://gridpak.com/ - Create your own responsive grid.
   
-  The grid below is a combination of the 1140 grid and Twitter Boostrap. 
-  I liked 1140 but Boostrap's grid was way more detailed so I merged them 
-  together, let's see how this works out. If you want to use 1140, the original 
+  The grid below is a combination of the 1140 grid and Twitter Boostrap.
+  I liked 1140 but Boostrap's grid was way more detailed so I merged them
+  together, let's see how this works out. If you want to use 1140, the original
   values are commented out on each line.
+  
+  --
+  MIXINS
+  I've also included grid mixins to use anywhere in _mixins.scss
   
   ******************************************************************/
   .onecol {

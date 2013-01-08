@@ -32,14 +32,19 @@ TOOLS
 *********************/
 
 // BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* { 
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing:    border-box; 
-	box-sizing:         border-box; 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
 }
 
-// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ 
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
 .image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+@mixin image-replacement {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -71,6 +76,43 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+
+/*********************
+GRID MIXINS
+Use grids anywhere!
+Grid classes are separate in _grid.scss so they can be included on demand.
+--
+Please use classes where you can, but if you need to swap the number of columns an item uses
+more than once you'll have to include them.
+*********************/
+
+@mixin first() {
+	margin-left: 0;
+}
+
+@mixin last() {
+	float: right;
+}
+
+%grid {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+
+@mixin onecol()    { width: 5.801104972%; @extend %grid; }       /* 4.85%;  } /* grid_1  */
+@mixin twocol()    { width: 14.364640883%; @extend %grid; }       /* 13.45%; } /* grid_2  */
+@mixin threecol()  { width: 22.928176794%; @extend %grid; }       /* 22.05%; } /* grid_3  */
+@mixin fourcol()   { width: 31.491712705%; @extend %grid; }       /* 30.75%; } /* grid_4  */
+@mixin fivecol()   { width: 40.055248616%; @extend %grid; }       /* 39.45%; } /* grid_5  */
+@mixin sixcol()    { width: 48.618784527%; @extend %grid; }       /* 48%;    } /* grid_6  */
+@mixin sevencol()  { width: 57.182320438000005%; @extend %grid; } /* 56.75%; } /* grid_7  */
+@mixin eightcol()  { width: 65.74585634900001%; @extend %grid; }  /* 65.4%;  } /* grid_8  */
+@mixin ninecol()   { width: 74.30939226%; @extend %grid; }        /* 74.05%; } /* grid_9  */
+@mixin tencol()    { width: 82.87292817100001%; @extend %grid; }  /* 82.7%;  } /* grid_10 */
+@mixin elevencol() { width: 91.436464082%; @extend %grid; }       /* 91.35%; } /* grid_11 */
+@mixin twelvecol() { width: 99.999999993%; @extend %grid; }       /* 100%;   } /* grid_12 */
+
 
 
 /*********************
@@ -110,7 +152,7 @@ span.amp {
   font-style: italic;
 }
 
-// text alignment 
+// text alignment
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
