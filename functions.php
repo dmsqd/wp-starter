@@ -1,6 +1,6 @@
 <?php
 /*
-Author: DMSQUARED DMSQUARED
+Author: DMSQUARED
 URL: htp://dmsqd.com/
 
 This is where you can drop your custom functions or
