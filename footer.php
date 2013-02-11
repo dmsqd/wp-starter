@@ -8,7 +8,7 @@
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
-					<p class="attribution">Crafted by <a href="http://www.dmsqd.com/"><b>DM</b>SQUARED</a>.</p>
+					<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
 
 				</div> <!-- end #inner-footer -->
 

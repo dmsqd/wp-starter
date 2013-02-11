@@ -75,7 +75,7 @@ function bones_rss_dashboard_widget() {
 
 // calling all custom dashboard widgets
 function bones_custom_dashboard_widgets() {
-	wp_add_dashboard_widget('bones_rss_dashboard_widget', 'Recently at DMSQUARED', 'bones_rss_dashboard_widget');
+	wp_add_dashboard_widget('bones_rss_dashboard_widget', 'Recently at DMSQD', 'bones_rss_dashboard_widget');
 	/*
 	Be sure to drop any other created Dashboard Widgets
 	in this function and they will all load.
@@ -121,7 +121,7 @@ you like.
 // Custom Backend Footer
 // Custom Backend Footer
 function bones_custom_admin_footer() {
-	echo 'Crafted by <a href="http://www.dmsqd.com"><strong>DMS</strong>QUARED</a>. Support - 01226 733 501';
+	echo 'Crafted by <a href="http://www.dmsqd.com">DMSQD</a>. Support - 01226 733 501';
 }
 
 // adding it to the admin area
