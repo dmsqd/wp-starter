@@ -30,6 +30,8 @@ if (!window.getComputedStyle) {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
+    placeholderFallback();
+
     /*
     Responsive jQuery is a tricky thing.
     There's a bunch of different ways to handle
@@ -110,12 +112,6 @@ jQuery(document).ready(function($) {
 
 //Placeholder fallback for older IE browsers
 //Use the standard placeholder as normal, this will do the rest
-
-jQuery(document).ready(function() {
-	placeholderFallback();
-});
-
-// HTML5 Fallbacks for older browsers
 function placeholderFallback() {
 	// check placeholder browser support
 	if (!Modernizr.input.placeholder) {
