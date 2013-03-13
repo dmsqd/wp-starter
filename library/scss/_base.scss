@@ -293,6 +293,7 @@ POSTS & CONTENT STYLES
 			ul, ol, table, dl {}
 
 			ul, ol {
+				margin-left: 1.1em; //indents bullets to level with content
 
 				li {}
 
@@ -300,7 +301,6 @@ POSTS & CONTENT STYLES
 
 			ul {
 				list-style-type: disc;
-				margin-left: 1em;
 
 				li {}
 
@@ -308,7 +308,6 @@ POSTS & CONTENT STYLES
 
 			ol {
 				list-style-type: decimal;
-				margin-left: 1em;
 
 				li {}
 
