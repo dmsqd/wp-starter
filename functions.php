@@ -222,4 +222,54 @@ $myExcerptLength=0;?>
 
 */
 
+/*************** ADD STYLES TO TINYMCE *************/
+
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
+
+function my_mce_before_init( $settings ) {
+
+    $style_formats = array(
+        array(
+            'title' => 'Button',
+            'selector' => 'a',
+            'classes' => 'button'
+        ),
+        // array(
+        //     'title' => 'Read More Link',
+        //     'selector' => 'a',
+        //     'classes' => 'read-more'
+        // ),
+        // array(
+        //     'title' => 'Read More Button',
+        //     'selector' => 'a',
+        //     'classes' => 'read-more-button'
+        // ),
+        array(
+            'title' => 'Inline List',
+            'selector' => 'ol, ul',
+            'classes' => 'inline'
+        ),
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+
+}
+
+/*************** IMPORT CSS TO TINYMCE *************/
+
+add_action( 'admin_init', 'add_my_editor_style' );
+
+function add_my_editor_style() {
+    add_editor_style('library/css/editor.css');
+}
+
 ?>
