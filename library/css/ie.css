@@ -114,7 +114,7 @@ use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
-  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic; }
 
 .text-left {
@@ -469,7 +469,7 @@ NAVIGATION STYLES
     .nav li ul.sub-menu,
     .nav li ul.children {
       width: 200px;
-      border: 1px solid #cccccc;
+      border: 1px solid #ccc;
       border-top: 0;
       position: absolute;
       display: none;
@@ -487,7 +487,7 @@ NAVIGATION STYLES
           border-right: 0;
           display: block;
           width: 180px;
-          border-bottom: 1px solid #cccccc; }
+          border-bottom: 1px solid #ccc; }
         .nav li ul.sub-menu li:last-child a,
         .nav li ul.children li:last-child a {
           border-bottom: 0; }
@@ -512,7 +512,7 @@ SIDEBARS & ASIDES
   margin-top: 2.2em; }
 
 .widgettitle {
-  border-bottom: 2px solid #444444;
+  border-bottom: 2px solid #444;
   margin-bottom: 0.75em; }
 
 .widget {

@@ -299,6 +299,26 @@ POSTS & CONTENT STYLES
 
 			}
 
+			/*
+			Allow inline ol or uls. Adds in the bullet or counter using pseudo content
+			 */
+			ul.inline,
+			ol.inline {
+				margin: 1em 0;
+				counter-reset:li; /* Initiate a counter */
+				li {
+					display: inline;
+					margin: 0 0.5em 0 0;
+				}
+			}
+				ol.inline li:before {
+					content:counter(li) ': '; /* Use the counter as content */
+				    counter-increment:li; /* Increment the counter by 1 */
+				}
+				ul.inline li:before {
+					content: '• ';
+				}
+
 			ul {
 				list-style-type: disc;
 
