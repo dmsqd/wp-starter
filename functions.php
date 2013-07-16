@@ -272,4 +272,20 @@ function add_my_editor_style() {
     add_editor_style('library/css/editor.css');
 }
 
+/************** DIE DUMP - Debug function *************/
+
+/**
+ * Dump the given value and kill the script.
+ *
+ * @param  mixed  $value
+ * @return void
+ */
+function dd($value)
+{
+    echo "<pre>";
+    var_dump($value);
+    echo "</pre>";
+    die;
+}
+
 ?>
