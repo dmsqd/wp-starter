@@ -101,18 +101,18 @@ more than once you'll have to include them.
   margin-left: 2.762430939%;
 }
 
-@mixin onecol    { width: 5.801104972%; @include gridbase; }       /* 4.85%;  } /* grid_1  */
-@mixin twocol    { width: 14.364640883%; @include gridbase; }       /* 13.45%; } /* grid_2  */
-@mixin threecol  { width: 22.928176794%; @include gridbase; }       /* 22.05%; } /* grid_3  */
-@mixin fourcol   { width: 31.491712705%; @include gridbase; }       /* 30.75%; } /* grid_4  */
-@mixin fivecol   { width: 40.055248616%; @include gridbase; }       /* 39.45%; } /* grid_5  */
-@mixin sixcol	 { width: 48.618784527%; @include gridbase;}       /* 48%;    } /* grid_6  */
-@mixin sevencol  { width: 57.182320438000005%; @include gridbase; } /* 56.75%; } /* grid_7  */
-@mixin eightcol  { width: 65.74585634900001%; @include gridbase; }  /* 65.4%;  } /* grid_8  */
-@mixin ninecol   { width: 74.30939226%; @include gridbase; }        /* 74.05%; } /* grid_9  */
-@mixin tencol    { width: 82.87292817100001%; @include gridbase; }  /* 82.7%;  } /* grid_10 */
-@mixin elevencol { width: 91.436464082%; @include gridbase; }       /* 91.35%; } /* grid_11 */
-@mixin twelvecol { width: 99.999999993%; @include gridbase; }       /* 100%;   } /* grid_12 */
+@mixin onecol    { width: $onecol; @include gridbase; }       /* 4.85%;  } /* grid_1  */
+@mixin twocol    { width: $twocol; @include gridbase; }       /* 13.45%; } /* grid_2  */
+@mixin threecol  { width: $threecol; @include gridbase; }       /* 22.05%; } /* grid_3  */
+@mixin fourcol   { width: $fourcol; @include gridbase; }       /* 30.75%; } /* grid_4  */
+@mixin fivecol   { width: $fivecol; @include gridbase; }       /* 39.45%; } /* grid_5  */
+@mixin sixcol	 { width: $sixcol; @include gridbase;}       /* 48%;    } /* grid_6  */
+@mixin sevencol  { width: $sevencol; @include gridbase; } /* 56.75%; } /* grid_7  */
+@mixin eightcol  { width: $eightcol; @include gridbase; }  /* 65.4%;  } /* grid_8  */
+@mixin ninecol   { width: $ninecol; @include gridbase; }        /* 74.05%; } /* grid_9  */
+@mixin tencol    { width: $tencol; @include gridbase; }  /* 82.7%;  } /* grid_10 */
+@mixin elevencol { width: $elevencol; @include gridbase; }       /* 91.35%; } /* grid_11 */
+@mixin twelvecol { width: $twelvecol; @include gridbase; }       /* 100%;   } /* grid_12 */
 
 
 

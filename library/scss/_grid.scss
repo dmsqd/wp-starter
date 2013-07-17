@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author: DMSQUARED
+Author: DMSQD
 
 Stylesheet: Grid Stylesheet
 
@@ -25,28 +25,59 @@ I've also included grid mixins to use anywhere in _mixins.scss
 
 ******************************************************************/
 
-.onecol    { width: 5.801104972%;  }       /* 4.85%;  } /* grid_1  */
-.twocol    { width: 14.364640883%; }       /* 13.45%; } /* grid_2  */
-.threecol  { width: 22.928176794%; }       /* 22.05%; } /* grid_3  */
-.fourcol   { width: 31.491712705%; }       /* 30.75%; } /* grid_4  */
-.fivecol   { width: 40.055248616%; }       /* 39.45%; } /* grid_5  */
-.sixcol    { width: 48.618784527%; }       /* 48%;    } /* grid_6  */
-.sevencol  { width: 57.182320438000005%; } /* 56.75%; } /* grid_7  */
-.eightcol  { width: 65.74585634900001%; }  /* 65.4%;  } /* grid_8  */
-.ninecol   { width: 74.30939226%; }        /* 74.05%; } /* grid_9  */
-.tencol    { width: 82.87292817100001%; }  /* 82.7%;  } /* grid_10 */
-.elevencol { width: 91.436464082%; }       /* 91.35%; } /* grid_11 */
-.twelvecol { width: 99.999999993%; }       /* 100%;   } /* grid_12 */
+$onecol: 5.801104972%;         	/* 4.85%;  } /* grid_1  */
+$twocol: 14.364640883%; 	   	/* 13.45%; } /* grid_2  */
+$threecol: 22.928176794%;      	/* 22.05%; } /* grid_3  */
+$fourcol: 31.491712705%;       	/* 30.75%; } /* grid_4  */
+$fivecol: 40.055248616%;       	/* 39.45%; } /* grid_5  */
+$sixcol: 48.618784527%;        	/* 48%;    } /* grid_6  */
+$sevencol: 57.182320438000005%; /* 56.75%; } /* grid_7  */
+$eightcol: 65.74585634900001%;  /* 65.4%;  } /* grid_8  */
+$ninecol: 74.30939226%;         /* 74.05%; } /* grid_9  */
+$tencol: 82.87292817100001%;    /* 82.7%;  } /* grid_10 */
+$elevencol: 91.436464082%;      /* 91.35%; } /* grid_11 */
+$twelvecol: 99.999999993%;      /* 100%;   } /* grid_12 */
+
+$margin-left:	2.762430939%;
+
+.onecol    { width: $onecol;  }       /* 4.85%;  } /* grid_1  */
+.twocol    { width: $twocol; }       /* 13.45%; } /* grid_2  */
+.threecol  { width: $threecol; }       /* 22.05%; } /* grid_3  */
+.fourcol   { width: $fourcol; }       /* 30.75%; } /* grid_4  */
+.fivecol   { width: $fivecol; }       /* 39.45%; } /* grid_5  */
+.sixcol    { width: $sixcol; }       /* 48%;    } /* grid_6  */
+.sevencol  { width: $sevencol; } /* 56.75%; } /* grid_7  */
+.eightcol  { width: $eightcol; }  /* 65.4%;  } /* grid_8  */
+.ninecol   { width: $ninecol; }        /* 74.05%; } /* grid_9  */
+.tencol    { width: $tencol; }  /* 82.7%;  } /* grid_10 */
+.elevencol { width: $elevencol; }       /* 91.35%; } /* grid_11 */
+.twelvecol { width: $twelvecol; }       /* 100%;   } /* grid_12 */
 
 // layout & column defaults
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;
-  margin-left: 2.762430939%;
+  margin-left: $margin-left;
 }
+
+// push by DMSQD - ISSUE WHEN COMBINED WITH .FIRST
+
+.push_1    		{ margin-left: $onecol + $margin-left*2;  }       /* 4.85%;  } /* grid_1  */
+.push_2    		{ margin-left: $twocol + $margin-left*2; }       /* 13.45%; } /* grid_2  */
+.push_3  		{ margin-left: $threecol + $margin-left*2; }       /* 22.05%; } /* grid_3  */
+.push_4   		{ margin-left: $fourcol + $margin-left*2; }       /* 30.75%; } /* grid_4  */
+.push_5   		{ margin-left: $fivecol + $margin-left*2; }       /* 39.45%; } /* grid_5  */
+.push_6	  		{ margin-left: $sixcol + $margin-left*2; }       /* 48%;    } /* grid_6  */
+.push_7  		{ margin-left: $sevencol + $margin-left*2; } /* 56.75%; } /* grid_7  */
+.push_8  		{ margin-left: $eightcol + $margin-left*2; }  /* 65.4%;  } /* grid_8  */
+.push_9   		{ margin-left: $ninecol + $margin-left*2; }        /* 74.05%; } /* grid_9  */
+.push_10    	{ margin-left: $tencol + $margin-left*2; }  /* 82.7%;  } /* grid_10 */
+.push_11 		{ margin-left: $elevencol + $margin-left*2; }       /* 91.35%; } /* grid_11 */
+.push_12 		{ margin-left: $twelvecol + $margin-left*2; }       /* 100%;   } /* grid_12 */
 
 .first {
   margin-left: 0;
+  clear:  left;
 }
 
 .last {
