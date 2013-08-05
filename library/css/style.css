@@ -1306,61 +1306,122 @@ you can add resource intensive styles.
   I've also included grid mixins to use anywhere in _mixins.scss
   
   ******************************************************************/
+  /* 4.85%;  } /* grid_1  */
+  /* 13.45%; } /* grid_2  */
+  /* 22.05%; } /* grid_3  */
+  /* 30.75%; } /* grid_4  */
+  /* 39.45%; } /* grid_5  */
+  /* 48%;    } /* grid_6  */
+  /* 56.75%; } /* grid_7  */
+  /* 65.4%;  } /* grid_8  */
+  /* 74.05%; } /* grid_9  */
+  /* 82.7%;  } /* grid_10 */
+  /* 91.35%; } /* grid_11 */
+  /* 100%;   } /* grid_12 */
   .onecol {
-    width: 5.801104972%; }
+    width: 5.8011%; }
 
   /* 4.85%;  } /* grid_1  */
   .twocol {
-    width: 14.364640883%; }
+    width: 14.36464%; }
 
   /* 13.45%; } /* grid_2  */
   .threecol {
-    width: 22.928176794%; }
+    width: 22.92818%; }
 
   /* 22.05%; } /* grid_3  */
   .fourcol {
-    width: 31.491712705%; }
+    width: 31.49171%; }
 
   /* 30.75%; } /* grid_4  */
   .fivecol {
-    width: 40.055248616%; }
+    width: 40.05525%; }
 
   /* 39.45%; } /* grid_5  */
   .sixcol {
-    width: 48.618784527%; }
+    width: 48.61878%; }
 
   /* 48%;    } /* grid_6  */
   .sevencol {
-    width: 57.182320438000005%; }
+    width: 57.18232%; }
 
   /* 56.75%; } /* grid_7  */
   .eightcol {
-    width: 65.74585634900001%; }
+    width: 65.74586%; }
 
   /* 65.4%;  } /* grid_8  */
   .ninecol {
-    width: 74.30939226%; }
+    width: 74.30939%; }
 
   /* 74.05%; } /* grid_9  */
   .tencol {
-    width: 82.87292817100001%; }
+    width: 82.87293%; }
 
   /* 82.7%;  } /* grid_10 */
   .elevencol {
-    width: 91.436464082%; }
+    width: 91.43646%; }
 
   /* 91.35%; } /* grid_11 */
   .twelvecol {
-    width: 99.999999993%; }
+    width: 100.0%; }
 
   /* 100%;   } /* grid_12 */
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
     position: relative;
     float: left;
-    margin-left: 2.762430939%; }
+    margin-left: 2.76243%; }
 
+  .push_1 {
+    margin-left: 11.32597%; }
+
+  /* 4.85%;  } /* grid_1  */
+  .push_2 {
+    margin-left: 19.8895%; }
+
+  /* 13.45%; } /* grid_2  */
+  .push_3 {
+    margin-left: 28.45304%; }
+
+  /* 22.05%; } /* grid_3  */
+  .push_4 {
+    margin-left: 37.01657%; }
+
+  /* 30.75%; } /* grid_4  */
+  .push_5 {
+    margin-left: 45.58011%; }
+
+  /* 39.45%; } /* grid_5  */
+  .push_6 {
+    margin-left: 54.14365%; }
+
+  /* 48%;    } /* grid_6  */
+  .push_7 {
+    margin-left: 62.70718%; }
+
+  /* 56.75%; } /* grid_7  */
+  .push_8 {
+    margin-left: 71.27072%; }
+
+  /* 65.4%;  } /* grid_8  */
+  .push_9 {
+    margin-left: 79.83425%; }
+
+  /* 74.05%; } /* grid_9  */
+  .push_10 {
+    margin-left: 88.39779%; }
+
+  /* 82.7%;  } /* grid_10 */
+  .push_11 {
+    margin-left: 96.96133%; }
+
+  /* 91.35%; } /* grid_11 */
+  .push_12 {
+    margin-left: 105.52486%; }
+
+  /* 100%;   } /* grid_12 */
   .first {
-    margin-left: 0; }
+    margin-left: 0;
+    clear: left; }
 
   .last {
     float: right; }
