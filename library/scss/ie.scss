@@ -23,7 +23,7 @@ import the mixins file so SASS can understand the variables.
 @import "grid";
 @import "481up";
 @import "768up";
-@import "1030up";
+// @import "1030up";
 
 /*
 you can call the larger styles if you want, but there's really no need
@@ -51,3 +51,12 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+
+.ie8 {
+	.entry-content {
+		img {
+			//fix responsive images
+			width: auto;
+		}
+	}
+}
