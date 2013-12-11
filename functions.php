@@ -222,6 +222,17 @@ $myExcerptLength=0;?>
 
 */
 
+/*************** PREVENT AUTOLINKING POST IMAGES *************/
+
+function rkv_imagelink_setup() {
+    $image_set = get_option( 'image_default_link_type' );
+
+    if ($image_set !== 'none') {
+        update_option('image_default_link_type', 'none');
+    }
+}
+add_action('admin_init', 'rkv_imagelink_setup', 10);
+
 /*************** ADD STYLES TO TINYMCE *************/
 
 add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
