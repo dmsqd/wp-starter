@@ -39,7 +39,7 @@ single-bookmarks.php
 
 						    </section> <!-- end article section -->
 
-						    <footer class="article-header">
+						    <footer class="article-footer">
 
 							    <p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">Custom Tags:</span> ', ', ' ) ?></p>
 
