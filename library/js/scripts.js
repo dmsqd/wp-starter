@@ -30,6 +30,12 @@ if (!window.getComputedStyle) {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
+    /**
+     * Pre-cache as many jQuery selectors as you can!
+     */
+    var $topNav = $('.top-nav'),
+        $navToggle = $('.nav-toggle');
+
     placeholderFallback();
 
     /*
@@ -67,8 +73,14 @@ jQuery(document).ready(function($) {
 
     }
 
-
-	// add all your scripts here
+    // mobile collapsible nav
+    $topNav.hide();
+    $navToggle
+        .show()
+        .click(function(e){
+            e.preventDefault();
+            $('.top-nav').slideToggle();
+        });
 
 
 }); /* end of as page load scripts */

@@ -34,6 +34,9 @@ HEADER SYTLES
 .header {}
 
 	#logo {}
+	.nav-toggle {
+		display: none!important;
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -41,6 +44,7 @@ NAVIGATION STYLES
 
 .nav {
 	background: #eee;
+	display: block!important;
 	border: 0;
 
 	li {

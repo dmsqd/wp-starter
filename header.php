@@ -46,6 +46,7 @@
 					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
 
+					<button class="nav-toggle">Menu</button>
 
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
