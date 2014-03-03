@@ -1,14 +1,17 @@
 			<footer class="footer" role="contentinfo">
 
-				<div id="inner-footer" class="wrap clearfix">
+				<div id="inner-footer" class="inner-footer grid wrap">
 
-					<nav role="navigation">
+					<nav role="navigation" class="grid__item">
     					<?php bones_footer_links(); ?>
 	                </nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+	                <div class="grid__item lap--one-third desk--one-third">
+						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
-					<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
+						<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
+	                </div>
+
 
 				</div> <!-- end #inner-footer -->
 

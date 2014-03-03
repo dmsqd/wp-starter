@@ -41,20 +41,15 @@
 	    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
 	    					    	</section>
 	    					    	<footer class="article-footer">
-	    					    	    <p><?php _e("This is the error message in the page.php template.", "dmsqdtheme"); ?></p>
+	    					    	    <p><?php _e("This is the error message in the front-page.php template.", "dmsqdtheme"); ?></p>
 	    					    	</footer>
 	    					    </article>
 
 						    <?php endif; ?>
 
-	    				</div>
+	    				</div><!-- end #main -->
 
-					</div><!--
-    			 --><div class="grid__item lap--one-third desk--one-quarter">
-
-	    				<?php get_sidebar(); ?>
-
-    				</div>
+					</div>
 
 				</div> <!-- end #inner-content -->
 

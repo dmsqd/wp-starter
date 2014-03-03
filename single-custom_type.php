@@ -17,59 +17,66 @@ single-bookmarks.php
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="inner-content wrap grid">
 
-				    <div id="main" class="eightcol first clearfix" role="main">
+					<div class="grid__item lap--two-thirds desk--three-quarters">
 
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					    <div id="main" class="main clearfix" role="main">
 
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+						    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						    <header class="article-header">
+						    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-							    <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
+							    <header class="article-header">
 
-							    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
+								    <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 
-						    </header> <!-- end article header -->
+								    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
 
-						    <section class="entry-content clearfix">
+							    </header> <!-- end article header -->
 
-							    <?php the_content(); ?>
+							    <section class="entry-content clearfix">
 
-						    </section> <!-- end article section -->
+								    <?php the_content(); ?>
 
-						    <footer class="article-footer">
+							    </section> <!-- end article section -->
 
-							    <p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">Custom Tags:</span> ', ', ' ) ?></p>
+							    <footer class="article-footer">
 
-						    </footer> <!-- end article footer -->
+								    <p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">Custom Tags:</span> ', ', ' ) ?></p>
 
-						    <?php comments_template(); ?>
+							    </footer> <!-- end article footer -->
 
-					    </article> <!-- end article -->
+							    <?php comments_template(); ?>
 
-					    <?php endwhile; ?>
+						    </article> <!-- end article -->
 
-					    <?php else : ?>
+						    <?php endwhile; ?>
 
-        					<article id="post-not-found" class="hentry clearfix">
-        						<header class="article-header">
-        							<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-        						</header>
-        						<section class="entry-content">
-        							<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-        						</section>
-        						<footer class="article-footer">
-        						    <p><?php _e("This is the error message in the single-custom_type.php template.", "dmsqdtheme"); ?></p>
-        						</footer>
-        					</article>
+						    <?php else : ?>
 
-					    <?php endif; ?>
+	        					<article id="post-not-found" class="hentry clearfix">
+	        						<header class="article-header">
+	        							<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+	        						</header>
+	        						<section class="entry-content">
+	        							<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+	        						</section>
+	        						<footer class="article-footer">
+	        						    <p><?php _e("This is the error message in the single-custom_type.php template.", "dmsqdtheme"); ?></p>
+	        						</footer>
+	        					</article>
 
-				    </div> <!-- end #main -->
+						    <?php endif; ?>
 
-				    <?php get_sidebar('blog-sidebar'); ?>
+					    </div> <!-- end #main -->
+
+    				</div><!--
+    			 --><div class="grid__item lap--one-third desk--one-quarter">
+
+		    			<?php get_sidebar('blog-sidebar'); ?>
+
+    				</div>
 
 				</div> <!-- end #inner-content -->
 

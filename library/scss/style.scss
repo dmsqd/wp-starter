@@ -22,6 +22,16 @@ of the styles inside media queries.
 // import normalize
 @import "normalize";
 
+// import csswizardry-grids - please do not modify this file.
+// See https://github.com/csswizardry/csswizardry-grids
+$mobile-first: true;
+$pull: true;
+$push: true;
+$responsive: true;
+$use-markup-fix: true;
+$use-silent-classes: false;
+@import "grid";
+
 // import mixins
 @import "mixins";
 
@@ -55,9 +65,6 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
-
-	// import grids
-	@import "grid";
 
 	// styles in 768up.scss
 	@import "768up";

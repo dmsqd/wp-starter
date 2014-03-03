@@ -13,12 +13,10 @@
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -38,20 +36,22 @@
 
 			<header class="header" role="banner">
 
-				<div id="inner-header" class="wrap clearfix">
+				<div class="inner-header wrap grid">
 
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<div class="grid__item">
+						<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo"><?php bloginfo('name'); ?></a>
+					</div>
 
-					<!-- if you'd like to use the site description you can un-comment it below -->
 					<?php // bloginfo('description'); ?>
 
 					<button class="nav-toggle">Menu</button>
 
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
+					<div class="grid__item">
+						<nav role="navigation">
+							<?php bones_main_nav(); ?>
+						</nav>
+					</div>
 
-				</div> <!-- end #inner-header -->
+				</div> <!-- end .inner-header -->
 
 			</header> <!-- end header -->

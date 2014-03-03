@@ -24,15 +24,15 @@ though, go for it.
     color: #444 !important;
     text-decoration: underline;
 
-    // show links on printed pages
-    &:after {
-      content: " (" attr(href) ")";
-    }
+    // // show links on printed pages
+    // &:after {
+    //   content: " (" attr(href) ")";
+    // }
 
-    // show title too
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
+    // // show title too
+    // abbr[title]:after {
+    //   content: " (" attr(title) ")";
+    // }
   }
 
   .ir a:after,

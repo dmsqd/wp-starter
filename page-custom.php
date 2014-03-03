@@ -8,57 +8,59 @@ Template Name: Custom Page Example
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="inner-content wrap grid">
 
-				    <div id="main" class="eightcol first clearfix" role="main">
+					<div class="grid__item lap--two-thirds desk--three-quarters">
+					    <div id="main" class="main" role="main">
 
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+						    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						    <header class="article-header">
+							    <header class="article-header">
 
-							    <h1 class="page-title"><?php the_title(); ?></h1>
+								    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-							    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
+							    </header> <!-- end article header -->
 
-						    </header> <!-- end article header -->
+							    <section class="entry-content clearfix" itemprop="articleBody">
+								    <?php the_content(); ?>
+								</section> <!-- end article section -->
 
-						    <section class="entry-content">
-							    <?php the_content(); ?>
-						    </section> <!-- end article section -->
+							    <footer class="article-footer">
 
-						    <footer class="article-footer">
+								    <?php //the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 
-							    <p class="clearfix"><?php the_tags('<span class="tags">Tags: ', ', ', '</span>'); ?></p>
+							    </footer> <!-- end article footer -->
 
-						    </footer> <!-- end article footer -->
+							    <?php //comments_template(); ?>
 
-						    <?php comments_template(); ?>
+						    </article> <!-- end article -->
 
-					    </article> <!-- end article -->
+						    <?php endwhile; else : ?>
 
-					    <?php endwhile; ?>
+	    					    <article id="post-not-found" class="hentry clearfix">
+	    					    	<header class="article-header">
+	    					    		<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+	    					    	</header>
+	    					    	<section class="entry-content">
+	    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+	    					    	</section>
+	    					    	<footer class="article-footer">
+	    					    	    <p><?php _e("This is the error message in the page.php template.", "dmsqdtheme"); ?></p>
+	    					    	</footer>
+	    					    </article>
 
-					    <?php else : ?>
+						    <?php endif; ?>
 
-        					<article id="post-not-found" class="hentry clearfix">
-        					    <header class="article-header">
-        						    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-        						</header>
-        					    <section class="entry-content">
-        						    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-        						</section>
-        						<footer class="article-footer">
-        						    <p><?php _e("This is the error message in the page-custom.php template.", "dmsqdtheme"); ?></p>
-        						</footer>
-        					</article>
+	    				</div>
 
-					    <?php endif; ?>
+					</div><!--
+    			 --><div class="grid__item lap--one-third desk--one-quarter">
 
-				    </div> <!-- end #main -->
+	    				<?php get_sidebar(); ?>
 
-				    <?php get_sidebar(); ?>
+    				</div>
 
 				</div> <!-- end #inner-content -->
 

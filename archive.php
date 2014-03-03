@@ -2,103 +2,110 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="inner-content wrap grid">
 
-				    <div id="main" class="eightcol first clearfix" role="main">
+					<div class="grid__item lap--two-thirds desk--three-quarters">
 
-					    <?php if (is_category()) { ?>
-						    <h1 class="archive-title h2">
-							    <span><?php _e("Posts Categorised:", "dmsqdtheme"); ?></span> <?php single_cat_title(); ?>
-					    	</h1>
+					    <div id="main" class="main clearfix" role="main">
 
-					    <?php } elseif (is_tag()) { ?>
-						    <h1 class="archive-title h2">
-							    <span><?php _e("Posts Tagged:", "dmsqdtheme"); ?></span> <?php single_tag_title(); ?>
-						    </h1>
+						    <?php if (is_category()) { ?>
+							    <h1 class="archive-title h2">
+								    <span><?php _e("Posts Categorised:", "dmsqdtheme"); ?></span> <?php single_cat_title(); ?>
+						    	</h1>
 
-					    <?php } elseif (is_author()) {
-					    	global $post;
-					    	$author_id = $post->post_author;
-					    ?>
-						    <h1 class="archive-title h2">
+						    <?php } elseif (is_tag()) { ?>
+							    <h1 class="archive-title h2">
+								    <span><?php _e("Posts Tagged:", "dmsqdtheme"); ?></span> <?php single_tag_title(); ?>
+							    </h1>
 
-						    	<span><?php _e("Posts By:", "dmsqdtheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
+						    <?php } elseif (is_author()) {
+						    	global $post;
+						    	$author_id = $post->post_author;
+						    ?>
+							    <h1 class="archive-title h2">
 
-						    </h1>
-					    <?php } elseif (is_day()) { ?>
-						    <h1 class="archive-title h2">
-	    						<span><?php _e("Daily Archives:", "dmsqdtheme"); ?></span> <?php the_time('l, F j, Y'); ?>
-						    </h1>
+							    	<span><?php _e("Posts By:", "dmsqdtheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
 
-		    			<?php } elseif (is_month()) { ?>
-			    		    <h1 class="archive-title h2">
-				    	    	<span><?php _e("Monthly Archives:", "dmsqdtheme"); ?></span> <?php the_time('F Y'); ?>
-					        </h1>
+							    </h1>
+						    <?php } elseif (is_day()) { ?>
+							    <h1 class="archive-title h2">
+		    						<span><?php _e("Daily Archives:", "dmsqdtheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+							    </h1>
 
-					    <?php } elseif (is_year()) { ?>
-					        <h1 class="archive-title h2">
-					    	    <span><?php _e("Yearly Archives:", "dmsqdtheme"); ?></span> <?php the_time('Y'); ?>
-					        </h1>
-					    <?php } ?>
+			    			<?php } elseif (is_month()) { ?>
+				    		    <h1 class="archive-title h2">
+					    	    	<span><?php _e("Monthly Archives:", "dmsqdtheme"); ?></span> <?php the_time('F Y'); ?>
+						        </h1>
 
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						    <?php } elseif (is_year()) { ?>
+						        <h1 class="archive-title h2">
+						    	    <span><?php _e("Yearly Archives:", "dmsqdtheme"); ?></span> <?php the_time('Y'); ?>
+						        </h1>
+						    <?php } ?>
 
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+						    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						    <header class="article-header">
+						    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							    <header class="article-header">
 
-							    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
+								    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-						    </header> <!-- end article header -->
+								    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
 
-						    <section class="entry-content clearfix">
+							    </header> <!-- end article header -->
 
-							    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+							    <section class="entry-content clearfix">
 
-							    <?php the_excerpt(); ?>
+								    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-						    </section> <!-- end article section -->
+								    <?php the_excerpt(); ?>
 
-						    <footer class="article-footer">
+							    </section> <!-- end article section -->
 
-						    </footer> <!-- end article footer -->
+							    <footer class="article-footer">
 
-					    </article> <!-- end article -->
+							    </footer> <!-- end article footer -->
 
-					    <?php endwhile; ?>
+						    </article> <!-- end article -->
 
-					        <?php if (function_exists('bones_page_navi')) { ?>
-						        <?php bones_page_navi(); ?>
-					        <?php } else { ?>
-						        <nav class="wp-prev-next">
-							        <ul class="clearfix">
-								        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
-								        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
-							        </ul>
-					    	    </nav>
-					        <?php } ?>
+						    <?php endwhile; ?>
 
-					    <?php else : ?>
+						        <?php if (function_exists('bones_page_navi')) { ?>
+							        <?php bones_page_navi(); ?>
+						        <?php } else { ?>
+							        <nav class="wp-prev-next">
+								        <ul class="clearfix">
+									        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
+									        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
+								        </ul>
+						    	    </nav>
+						        <?php } ?>
 
-    					    <article id="post-not-found" class="hentry clearfix">
-    						    <header class="article-header">
-    							    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-    					    	</header>
-    						    <section class="entry-content">
-    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-        						</section>
-    	    					<footer class="article-footer">
-    		    				    <p><?php _e("This is the error message in the archive.php template.", "dmsqdtheme"); ?></p>
-    			    			</footer>
-    				    	</article>
+						    <?php else : ?>
 
-					    <?php endif; ?>
+	    					    <article id="post-not-found" class="hentry clearfix">
+	    						    <header class="article-header">
+	    							    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+	    					    	</header>
+	    						    <section class="entry-content">
+	    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+	        						</section>
+	    	    					<footer class="article-footer">
+	    		    				    <p><?php _e("This is the error message in the archive.php template.", "dmsqdtheme"); ?></p>
+	    			    			</footer>
+	    				    	</article>
 
-    				</div> <!-- end #main -->
+						    <?php endif; ?>
 
-	    			<?php get_sidebar('blog-sidebar'); ?>
+	    				</div> <!-- end #main -->
+
+    				</div><!--
+    			 --><div class="grid__item lap--one-third desk--one-quarter">
+
+		    			<?php get_sidebar('blog-sidebar'); ?>
+
+    				</div>
 
                 </div> <!-- end #inner-content -->
 

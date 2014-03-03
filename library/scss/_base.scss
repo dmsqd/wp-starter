@@ -16,10 +16,10 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: $black;
 }
 
 /********************
@@ -152,7 +152,10 @@ HEADER SYTLES
 
 .header {}
 
-	#logo {}
+	.inner-header {
+	}
+
+	.logo {}
 
 	.nav-toggle {
 		display: none; // will show using js
@@ -171,8 +174,9 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
+	border: $border;
 	border-bottom: 0;
+	padding: 0;
 
 	ul {
 		margin: 0;
@@ -185,7 +189,7 @@ and more scalable.
 			text-decoration: none;
 			padding: 10px 10px;
 			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			border-bottom: $border;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -211,6 +215,8 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
+			margin: 0;
+			padding: 0;
 
 			li {
 
@@ -245,12 +251,20 @@ and more scalable.
 
 } /* end .nav */
 
+	/**
+	 * Individual navs/overrides
+	 */
+
+	.top-nav {}
+
+	.footer-nav {}
+
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
+.content {
 	margin-top: 2.2em;
 }
 

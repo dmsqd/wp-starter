@@ -33,7 +33,8 @@ HEADER SYTLES
 
 .header {}
 
-	#logo {}
+	.logo {}
+
 	.nav-toggle {
 		display: none!important;
 	}
@@ -43,7 +44,6 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
 	display: block!important;
 	border: 0;
 
@@ -59,8 +59,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
-
+				background-color: $accent;
+				color: $white;
 			}
 		}
 
@@ -72,8 +72,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
-			width: 200px;
-			border: 1px solid #ccc;
+			border: $border;
 			border-top: 0;
 			position: absolute;
 			display: none;
@@ -86,7 +85,7 @@ NAVIGATION STYLES
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					border-bottom: $border;
 
 					&:hover,
 					&:focus {}
@@ -152,7 +151,7 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
+		border-bottom: $border;
 		margin-bottom: 0.75em;
 	}
 

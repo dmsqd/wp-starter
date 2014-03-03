@@ -2,57 +2,64 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap clearfix">
+				<div id="inner-content" class="inner-content wrap grid">
 
-					<div id="main" class="eightcol first clearfix" role="main">
+					<div class="grid__item lap--two-thirds desk--three-quarters">
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<div id="main" class="main clearfix" role="main">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-								<header class="article-header">
+								<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+									<header class="article-header">
 
-									<p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&amp;</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
+										<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 
-								</header> <!-- end article header -->
+										<p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&amp;</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
 
-								<section class="entry-content clearfix" itemprop="articleBody">
-									<?php the_content(); ?>
-								</section> <!-- end article section -->
+									</header> <!-- end article header -->
 
-								<footer class="article-footer">
+									<section class="entry-content clearfix" itemprop="articleBody">
+										<?php the_content(); ?>
+									</section> <!-- end article section -->
 
-									<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+									<footer class="article-footer">
 
-								</footer> <!-- end article footer -->
+										<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 
-								<?php comments_template(); ?>
+									</footer> <!-- end article footer -->
 
-							</article> <!-- end article -->
+									<?php comments_template(); ?>
 
-						<?php endwhile; ?>
+								</article> <!-- end article -->
 
-						<?php else : ?>
+							<?php endwhile; ?>
 
-							<article id="post-not-found" class="hentry clearfix">
-					    		<header class="article-header">
-					    			<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-					    		</header>
-					    		<section class="entry-content">
-					    			<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-					    		</section>
-					    		<footer class="article-footer">
-					    		    <p><?php _e("This is the error message in the single.php template.", "dmsqdtheme"); ?></p>
-					    		</footer>
-							</article>
+							<?php else : ?>
 
-						<?php endif; ?>
+								<article id="post-not-found" class="hentry clearfix">
+						    		<header class="article-header">
+						    			<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+						    		</header>
+						    		<section class="entry-content">
+						    			<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+						    		</section>
+						    		<footer class="article-footer">
+						    		    <p><?php _e("This is the error message in the single.php template.", "dmsqdtheme"); ?></p>
+						    		</footer>
+								</article>
 
-					</div> <!-- end #main -->
+							<?php endif; ?>
 
-					<?php get_sidebar('blog-sidebar'); ?>
+						</div> <!-- end #main -->
+
+					</div><!--
+    			 --><div class="grid__item lap--one-third desk--one-quarter">
+
+		    			<?php get_sidebar('blog-sidebar'); ?>
+
+    				</div>
 
 				</div> <!-- end #inner-content -->
 
