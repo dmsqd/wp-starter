@@ -120,7 +120,7 @@ NAVIGATION
 			/* highlight sub-menu current page */
 			li.current-menu-item,
 			li.current_page_item,
-			li.current-page-ancestor {
+			li.current_page_ancestor {
 				a {}
 			}
 		}
@@ -136,7 +136,7 @@ NAVIGATION
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
-	li.current-page-ancestor {
+	li.current_page_ancestor {
 		a {}
 	}  /* end current highlighters */
 
