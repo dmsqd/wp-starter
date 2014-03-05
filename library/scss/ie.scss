@@ -21,6 +21,11 @@ import the mixins file so SASS can understand the variables.
 /* import mixins */
 @import "mixins";
 @import "grid";
+
+//include desk--xx grid sizes outside of any media queries
+//so that the site behaves in desktop mode
+@include device-type('desk--');
+
 @import "481up";
 @import "768up";
 // @import "1030up";

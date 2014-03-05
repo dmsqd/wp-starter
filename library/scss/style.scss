@@ -22,6 +22,9 @@ of the styles inside media queries.
 // import normalize
 @import "normalize";
 
+// import mixins
+@import "mixins";
+
 // import csswizardry-grids - please do not modify this file.
 // See https://github.com/csswizardry/csswizardry-grids
 $mobile-first: true;
@@ -31,9 +34,6 @@ $responsive: true;
 $use-markup-fix: true;
 $use-silent-classes: false;
 @import "grid";
-
-// import mixins
-@import "mixins";
 
 /*
 BASE (MOBILE) SIZE

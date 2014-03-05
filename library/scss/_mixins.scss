@@ -50,6 +50,16 @@ TOOLS
 	overflow: hidden;
 }
 
+@mixin inline-block($minHeight: null) {
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    @if $minHeight != null {
+        *min-height: $minHeight;
+        _height: $minHeight;
+    }
+}
+
 
 /*********************
 COLORS
