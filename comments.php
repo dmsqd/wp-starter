@@ -8,7 +8,7 @@ The comments page for Bones
     die ('Please do not load this page directly. Thanks!');
 
   if ( post_password_required() ) { ?>
-  	<div class="alert help">
+  	<div class="alert alert-help">
     	<p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "dmsqdtheme"); ?></p>
   	</div>
   <?php
@@ -66,7 +66,7 @@ The comments page for Bones
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-  	<div class="alert help">
+  	<div class="alert alert-help">
   		<p><?php printf( 'You must be %1$slogged in%2$s to post a comment.', '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
   	</div>
 	<?php else : ?>
@@ -108,7 +108,7 @@ The comments page for Bones
 	  <?php comment_id_fields(); ?>
 	</p>
 
-	<div class="alert info">
+	<div class="alert alert-info">
 		<p id="allowed_tags" class="small"><strong>XHTML:</strong> <?php _e('You can use these tags', 'dmsqdtheme'); ?>: <code><?php echo allowed_tags(); ?></code></p>
 	</div>
 

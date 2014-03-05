@@ -8,7 +8,7 @@
 
 						<!-- This content shows up if there are no widgets defined in the backend. -->
 
-						<div class="alert help">
+						<div class="alert alert-help">
 							<p><?php _e("Please activate some Widgets in the default sidebar.", "dmsqdtheme");  ?></p>
 						</div>
 

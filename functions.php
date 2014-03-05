@@ -142,7 +142,7 @@ function bones_comments($comment, $args, $depth) {
 				<?php edit_comment_link(__('(Edit)', 'dmsqdtheme'),'  ','') ?>
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
-       			<div class="alert info">
+       			<div class="alert alert-info">
           			<p><?php _e('Your comment is awaiting moderation.', 'dmsqdtheme') ?></p>
           		</div>
 			<?php endif; ?>
