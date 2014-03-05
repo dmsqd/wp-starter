@@ -2,75 +2,79 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap clearfix">
+				<div id="inner-content" class="inner-content wrap">
 
-					<div class="grid__item lap--two-thirds desk--three-quarters">
+					<div class="grid">
 
-					    <div id="main" class="main clearfix" role="main">
+						<div class="grid__item lap--two-thirds desk--three-quarters">
 
-						    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						    <div id="main" class="main clearfix" role="main">
 
-						    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+							    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							    <header class="article-header">
+							    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-								    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+								    <header class="article-header">
+
+									    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
 									    <p class="byline vcard"><?php _e('Posted', 'dmsqdtheme'); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time> <span class="amp">&amp;</span> <?php _e('filed under', 'dmsqdtheme'); ?> <?php the_category(', '); ?>.</p>
 
-							    </header> <!-- end article header -->
+								    </header> <!-- end article header -->
 
-							    <section class="entry-content clearfix">
-								    <?php the_content(); ?>
-							    </section> <!-- end article section -->
+								    <section class="entry-content clearfix">
+									    <?php the_content(); ?>
+								    </section> <!-- end article section -->
 
-							    <footer class="article-footer">
+								    <footer class="article-footer">
 
-	    							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+		    							<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
 
-							    </footer> <!-- end article footer -->
+								    </footer> <!-- end article footer -->
 
-							    <?php // comments_template(); // uncomment if you want to use them ?>
+								    <?php // comments_template(); // uncomment if you want to use them ?>
 
-						    </article> <!-- end article -->
+							    </article> <!-- end article -->
 
-						    <?php endwhile; ?>
+							    <?php endwhile; ?>
 
-						        <?php if (function_exists('bones_page_navi')) { ?>
-						            <?php bones_page_navi(); ?>
-						        <?php } else { ?>
-						            <nav class="wp-prev-next">
-						                <ul class="clearfix">
-						        	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
-						        	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
-						                </ul>
-						            </nav>
-						        <?php } ?>
+							        <?php if (function_exists('bones_page_navi')) { ?>
+							            <?php bones_page_navi(); ?>
+							        <?php } else { ?>
+							            <nav class="wp-prev-next">
+							                <ul class="clearfix">
+							        	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
+							        	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
+							                </ul>
+							            </nav>
+							        <?php } ?>
 
-						    <?php else : ?>
+							    <?php else : ?>
 
-						        <article class="post-not-found hentry clearfix">
-						            <header class="article-header">
-						        	    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-						        	</header>
-						            <section class="entry-content">
-						        	    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-						        	</section>
-						        	<footer class="article-footer">
-						        	    <p><?php _e("This is the error message in the index.php template.", "dmsqdtheme"); ?></p>
-						        	</footer>
-						        </article>
+							        <article class="post-not-found hentry clearfix">
+							            <header class="article-header">
+							        	    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+							        	</header>
+							            <section class="entry-content">
+							        	    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+							        	</section>
+							        	<footer class="article-footer">
+							        	    <p><?php _e("This is the error message in the index.php template.", "dmsqdtheme"); ?></p>
+							        	</footer>
+							        </article>
 
-						    <?php endif; ?>
+							    <?php endif; ?>
 
-					    </div> <!-- end #main -->
+						    </div> <!-- end #main -->
 
-    				</div><!--
-    			 --><div class="grid__item lap--one-third desk--one-quarter">
+	    				</div><!--
+	    			 --><div class="grid__item lap--one-third desk--one-quarter">
 
-		    			<?php get_sidebar('blog-sidebar'); ?>
+			    			<?php get_sidebar('blog-sidebar'); ?>
 
-    				</div>
+	    				</div>
+
+					</div><!-- end .grid -->
 
 				</div> <!-- end #inner-content -->
 

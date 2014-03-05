@@ -2,36 +2,40 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap grid">
+				<div id="inner-content" class="inner-content wrap">
 
-					<div class="grid__item lap--two-thirds desk--three-quarters">
+					<div class="grid">
 
-						<div id="main" class="clearfix" role="main">
+						<div class="grid__item lap--two-thirds desk--three-quarters">
 
-							<article id="post-not-found" class="hentry clearfix">
+							<div id="main" class="clearfix" role="main">
 
-								<header class="article-header">
+								<article id="post-not-found" class="hentry clearfix">
 
-									<h1><?php _e("404 - Page Not Found", "dmsqdtheme"); ?></h1>
+									<header class="article-header">
 
-								</header> <!-- end article header -->
+										<h1><?php _e("404 - Page Not Found", "dmsqdtheme"); ?></h1>
 
-								<section class="entry-content">
+									</header> <!-- end article header -->
 
-									<p><?php _e("The page you were looking for was not found. Please try searching.", "dmsqdtheme"); ?></p>
+									<section class="entry-content">
 
-								</section> <!-- end article section -->
+										<p><?php _e("The page you were looking for was not found. Please try searching.", "dmsqdtheme"); ?></p>
 
-								<section class="search">
+									</section> <!-- end article section -->
 
-								    <p><?php get_search_form(); ?></p>
+									<section class="search">
 
-								</section> <!-- end search section -->
+									    <p><?php get_search_form(); ?></p>
 
-							</article> <!-- end article -->
+									</section> <!-- end search section -->
 
-						</div> <!-- end #main -->
-					</div>
+								</article> <!-- end article -->
+
+							</div> <!-- end #main -->
+						</div>
+
+					</div><!-- end .grid -->
 
 				</div> <!-- end #inner-content -->
 

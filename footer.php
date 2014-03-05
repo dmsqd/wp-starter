@@ -1,17 +1,20 @@
 			<footer class="footer" role="contentinfo">
 
-				<div id="inner-footer" class="inner-footer grid wrap">
+				<div id="inner-footer" class="inner-footer wrap">
 
-					<nav role="navigation" class="grid__item">
-    					<?php bones_footer_links(); ?>
-	                </nav>
+					<div class="grid">
 
-	                <div class="grid__item lap--one-third desk--one-third">
-						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+						<nav role="navigation" class="grid__item">
+	    					<?php bones_footer_links(); ?>
+		                </nav><!--
 
-						<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
-	                </div>
+		             --><div class="grid__item lap--one-third desk--one-third">
+							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
+							<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
+		                </div>
+
+					</div><!-- end .grid -->
 
 				</div> <!-- end #inner-footer -->
 

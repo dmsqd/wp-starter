@@ -24,6 +24,9 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
+		<!--[if IE 7]>
+		    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/libs/csswizardry-grids-ie7-polyfill.min.js"></script>
+		<![endif]-->
 
 		<!-- drop Google Analytics Here -->
 		<!-- end analytics -->
@@ -36,21 +39,26 @@
 
 			<header class="header" role="banner">
 
-				<div class="inner-header wrap grid">
+				<div class="inner-header wrap">
 
-					<div class="grid__item">
-						<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo"><?php bloginfo('name'); ?></a>
-					</div>
+					<div class="grid">
 
-					<?php // bloginfo('description'); ?>
+						<div class="grid__item">
+							<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo"><?php bloginfo('name'); ?></a>
+							<?php // bloginfo('description'); ?>
+						</div><!--
 
-					<button class="nav-toggle">Menu</button>
+					 --><div class="grid__item">
+							<button class="nav-toggle">Menu</button>
+						</div><!--
 
-					<div class="grid__item">
-						<nav role="navigation">
-							<?php bones_main_nav(); ?>
-						</nav>
-					</div>
+					 --><div class="grid__item">
+							<nav role="navigation">
+								<?php bones_main_nav(); ?>
+							</nav>
+						</div>
+
+					</div><!-- end .grid -->
 
 				</div> <!-- end .inner-header -->
 

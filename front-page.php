@@ -2,54 +2,58 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap grid">
+				<div id="inner-content" class="inner-content wrap">
 
-					<div class="grid__item lap--two-thirds desk--three-quarters">
-					    <div id="main" class="main" role="main">
+					<div class="grid">
 
-						    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<div class="grid__item lap--two-thirds desk--three-quarters">
+						    <div id="main" class="main" role="main">
 
-						    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							    <header class="article-header">
+							    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+								    <header class="article-header">
 
-							    </header> <!-- end article header -->
+									    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-							    <section class="entry-content clearfix" itemprop="articleBody">
-								    <?php the_content(); ?>
-								</section> <!-- end article section -->
+								    </header> <!-- end article header -->
 
-							    <footer class="article-footer">
+								    <section class="entry-content clearfix" itemprop="articleBody">
+									    <?php the_content(); ?>
+									</section> <!-- end article section -->
 
-								    <?php //the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+								    <footer class="article-footer">
 
-							    </footer> <!-- end article footer -->
+									    <?php //the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 
-							    <?php //comments_template(); ?>
+								    </footer> <!-- end article footer -->
 
-						    </article> <!-- end article -->
+								    <?php //comments_template(); ?>
 
-						    <?php endwhile; else : ?>
+							    </article> <!-- end article -->
 
-	    					    <article id="post-not-found" class="hentry clearfix">
-	    					    	<header class="article-header">
-	    					    		<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
-	    					    	</header>
-	    					    	<section class="entry-content">
-	    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
-	    					    	</section>
-	    					    	<footer class="article-footer">
-	    					    	    <p><?php _e("This is the error message in the front-page.php template.", "dmsqdtheme"); ?></p>
-	    					    	</footer>
-	    					    </article>
+							    <?php endwhile; else : ?>
 
-						    <?php endif; ?>
+		    					    <article id="post-not-found" class="hentry clearfix">
+		    					    	<header class="article-header">
+		    					    		<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+		    					    	</header>
+		    					    	<section class="entry-content">
+		    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+		    					    	</section>
+		    					    	<footer class="article-footer">
+		    					    	    <p><?php _e("This is the error message in the front-page.php template.", "dmsqdtheme"); ?></p>
+		    					    	</footer>
+		    					    </article>
 
-	    				</div><!-- end #main -->
+							    <?php endif; ?>
 
-					</div>
+		    				</div><!-- end #main -->
+
+						</div>
+
+					</div><!-- end .grid -->
 
 				</div> <!-- end #inner-content -->
 
