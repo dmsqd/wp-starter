@@ -16,7 +16,7 @@
 
 								    <h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-								    <p class="byline vcard"><?php _e('Posted', 'dmsqdtheme'); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time> <?php _e('by', 'dmsqdtheme'); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e('filed under', 'dmsqdtheme'); ?> <?php the_category(', '); ?>.</p>
+									    <p class="byline vcard"><?php _e('Posted', 'dmsqdtheme'); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time(get_option('date_format')); ?></time> <span class="amp">&amp;</span> <?php _e('filed under', 'dmsqdtheme'); ?> <?php the_category(', '); ?>.</p>
 
 							    </header> <!-- end article header -->
 

@@ -31,7 +31,7 @@ single-bookmarks.php
 
 								    <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 
-								    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "dmsqdtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
+									    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
 
 							    </header> <!-- end article header -->
 
