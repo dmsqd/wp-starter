@@ -66,6 +66,23 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
+
+function bones_custom_image_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'bones-thumb-600' => __('600px by 150px'),
+        'bones-thumb-300' => __('300px by 100px'),
+    ) );
+}
+
+/*
+The function above adds the ability to use the dropdown menu to select
+the new images sizes you have just created from within the media manager
+when you add media to your content blocks. If you add more image sizes,
+duplicate one of the lines in the array and name it according to your
+new image size.
+*/
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
