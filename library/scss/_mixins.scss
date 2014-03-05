@@ -179,7 +179,7 @@ USAGE: @include border-radius(4px 4px 0 0);
 }
 
 /*********************
-TRANISTION
+TRANSITION
 *********************/
 
 /*
@@ -191,7 +191,7 @@ USAGE: @include transition(all 0.2s ease-in-out);
 
 @mixin transition($transition...) {
 	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+	$prefixes:      ("-webkit",  "");
   @each $prefix in $prefixes {
     #{$prefix}-transition: $transition;
   }
