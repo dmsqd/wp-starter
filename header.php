@@ -43,12 +43,21 @@
 
 					<div class="grid">
 
-						<div class="grid__item">
-							<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo"><?php bloginfo('name'); ?></a>
+						<div class="grid__item lap--one-half desk--one-half">
+							<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo">
+								<?php
+								if ( $logo = get_theme_mod('logo') ) {
+									echo '<img src="'.$logo.'" alt="'.get_bloginfo('name').'">';
+								} else {
+									bloginfo('name');
+								} ?>
+							</a>
 							<?php // bloginfo('description'); ?>
 						</div><!--
 
-					 --><div class="grid__item">
+					 --><div class="grid__item lap--one-half desk--one-half">
+							<?php echo get_option('phone') ? '<p>Phone: '.get_option('phone').'</p>' : ''; ?>
+							<?php echo get_option('email') ? '<p>Email: '.get_option('email').'</p>' : ''; ?>
 							<button class="nav-toggle">Menu</button>
 						</div><!--
 

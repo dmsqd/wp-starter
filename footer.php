@@ -11,6 +11,10 @@
 		             --><div class="grid__item lap--one-third desk--one-third">
 							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 
+							<?php echo get_option('facebook_url') ? '<a href="'.get_option('facebook_url').'" class="fb">Facebook</a>' : ''; ?>
+							<?php echo get_option('twitter_url') ? '<a href="'.get_option('twitter_url').'" class="twitter">Twitter</a>' : ''; ?>
+							<?php echo get_option('linkedin_url') ? '<a href="'.get_option('linkedin_url').'" class="linkedin">LinkedIn</a>' : ''; ?>
+
 							<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
 		                </div>
 

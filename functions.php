@@ -40,6 +40,11 @@ require_once('library/bones.php'); // if you remove this, bones will break
 */
 require_once('library/admin.php');
 
+/*
+4. Theme customiser
+ */
+require_once('library/customise.php');
+
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 

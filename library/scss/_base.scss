@@ -155,7 +155,12 @@ HEADER
 	.inner-header {
 	}
 
-	.logo {}
+	.logo {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
 
 	.nav-toggle {
 		display: none; // will show using js

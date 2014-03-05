@@ -103,6 +103,7 @@
 		    				</div> <!-- end #main -->
 
 	    				</div><!--
+
 	    			 --><div class="grid__item lap--one-third desk--one-quarter">
 
 			    			<?php get_sidebar('blog-sidebar'); ?>
