@@ -83,6 +83,7 @@ function custom_post_example() {
     			'add_new_item' => __( 'Add New Custom Category', 'dmsqdtheme' ), /* add new title for taxonomy */
     			'new_item_name' => __( 'New Custom Category Name', 'dmsqdtheme' ) /* name title for taxonomy */
     		),
+			'show_admin_column' => true,
     		'show_ui' => true,
     		'query_var' => true,
     		'rewrite' => array( 'slug' => 'custom-slug' ),
@@ -105,6 +106,7 @@ function custom_post_example() {
     			'add_new_item' => __( 'Add New Custom Tag', 'dmsqdtheme' ), /* add new title for taxonomy */
     			'new_item_name' => __( 'New Custom Tag Name', 'dmsqdtheme' ) /* name title for taxonomy */
     		),
+    		'show_admin_column' => true,
     		'show_ui' => true,
     		'query_var' => true,
     	)
