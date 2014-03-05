@@ -1,4 +1,4 @@
-				<div id="page-sidebar" class="sidebar clearfix" role="complementary">
+				<div id="page-sidebar" class="page-sidebar sidebar clearfix" role="complementary">
 
 					<?php if ( is_active_sidebar( 'page-sidebar' ) ) : ?>
 
