@@ -148,22 +148,22 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/library\/js\/libs\/csswizardry-grids-ie7-polyfill.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/js\/libs\/csswizardry-grids-ie7-polyfill.js",
-		"outputAbbreviatedPath": "\/library\/js\/libs\/min\/csswizardry-grids-ie7-polyfill.min.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/library\/js\/libs\/csswizardry-grids-ie7-polyfill.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/js\/libs\/csswizardry-grids-ie7-polyfill.min.js",
 		"outputAbbreviatedPath": "\/library\/js\/libs\/min\/csswizardry-grids-ie7-polyfill.min.min.js",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/library\/js\/libs\/jquery.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/js\/libs\/jquery.min.js",
+		"outputAbbreviatedPath": "\/library\/js\/libs\/min\/jquery.min.min.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1

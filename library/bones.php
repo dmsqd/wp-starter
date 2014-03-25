@@ -157,6 +157,33 @@ function bones_scripts_and_styles() {
   }
 }
 
+/**
+ * Update jQuery version and use Google's CDN
+ */
+
+add_action('wp_enqueue_scripts', 'dm2_update_jquery');
+
+function dm2_update_jquery() {
+  wp_deregister_script('jquery'); // Remove WordPress core's jQuery
+  wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', false, null, false);
+  add_filter('script_loader_src', 'dm2_jquery_local_fallback', 10, 2);
+}
+
+function dm2_jquery_local_fallback($src, $handle) {
+  static $add_jquery_fallback = false;
+
+  if ($add_jquery_fallback) {
+    echo '<script>window.jQuery || document.write(\'<script src="' . get_template_directory_uri() . '/library/js/libs/jquery-1.11.0.min.js"><\/script>\')</script>' . "\n";
+    $add_jquery_fallback = false;
+  }
+
+  if ($handle === 'jquery') {
+    $add_jquery_fallback = true;
+  }
+
+  return $src;
+}
+
 /*********************
 THEME SUPPORT
 *********************/
