@@ -55,7 +55,7 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
 function bones_rss_dashboard_widget() {
 	if(function_exists('fetch_feed')) {
 		include_once(ABSPATH . WPINC . '/feed.php');               // include the required file
-		$feed = fetch_feed('http://www.dmsqd.com/blog/?feed=rss2');        // specify the source feed
+		$feed = fetch_feed('http://www.hacksawstudio.com/blog/?feed=rss2');        // specify the source feed
 		$limit = $feed->get_item_quantity(7);                      // specify number of items
 		$items = $feed->get_items(0, $limit);                      // create an array of items
 	}
@@ -120,7 +120,7 @@ you like.
 // Custom Backend Footer
 // Custom Backend Footer
 function bones_custom_admin_footer() {
-	echo 'Crafted by <a href="http://www.dmsqd.com">DMSQD</a>. Support - 01226 733 501';
+	echo 'Created by <a href="http://www.hacksawstudio.com">Hacksaw</a>. Support - 01226 733 501';
 }
 
 // adding it to the admin area

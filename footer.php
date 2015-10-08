@@ -15,7 +15,7 @@
 							<?php echo get_option('twitter_url') ? '<a href="'.get_option('twitter_url').'" class="twitter">Twitter</a>' : ''; ?>
 							<?php echo get_option('linkedin_url') ? '<a href="'.get_option('linkedin_url').'" class="linkedin">LinkedIn</a>' : ''; ?>
 
-							<p class="attribution">Crafted by <a href="http://www.dmsqd.com/">DMSQD</a></p>
+							<p class="attribution"><a href="http://www.hacksawstudio.com/" class="hacksaw" title="Created by Hacksaw">Hacksaw</a></p>
 		                </div>
 
 					</div><!-- end .grid -->

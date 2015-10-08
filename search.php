@@ -20,7 +20,7 @@
 
 											<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-											<p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
+											<p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "hacksawtheme"); ?> <?php the_category(', '); ?>.</p>
 
 										</header> <!-- end article header -->
 
@@ -42,8 +42,8 @@
 								    <?php } else { ?>
 								        <nav class="wp-prev-next">
 								            <ul class="clearfix">
-								    	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
-								    	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
+								    	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "hacksawtheme")) ?></li>
+								    	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "hacksawtheme")) ?></li>
 								            </ul>
 								        </nav>
 								    <?php } ?>
@@ -52,13 +52,13 @@
 
 		    					    <article id="post-not-found" class="hentry clearfix">
 		    					    	<header class="article-header">
-		    					    		<h1><?php _e("Sorry, No Results.", "dmsqdtheme"); ?></h1>
+		    					    		<h1><?php _e("Sorry, No Results.", "hacksawtheme"); ?></h1>
 		    					    	</header>
 		    					    	<section class="entry-content">
-		    					    		<p><?php _e("Try your search again.", "dmsqdtheme"); ?></p>
+		    					    		<p><?php _e("Try your search again.", "hacksawtheme"); ?></p>
 		    					    	</section>
 		    					    	<footer class="article-footer">
-		    					    	    <p><?php _e("This is the error message in the search.php template.", "dmsqdtheme"); ?></p>
+		    					    	    <p><?php _e("This is the error message in the search.php template.", "hacksawtheme"); ?></p>
 		    					    	</footer>
 		    					    </article>
 

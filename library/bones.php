@@ -234,8 +234,8 @@ function bones_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'dmsqdtheme' ),   // main nav in header
-			'footer-links' => __( 'Footer Links', 'dmsqdtheme' ) // secondary nav in footer
+			'main-nav' => __( 'The Main Menu', 'hacksawtheme' ),   // main nav in header
+			'footer-links' => __( 'Footer Links', 'hacksawtheme' ) // secondary nav in footer
 		)
 	);
 } /* end bones theme support */
@@ -401,7 +401,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a href="'. get_permalink($post->ID) . '" class="read-more" title="'. __('Read', 'dmsqdtheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'dmsqdtheme') .'</a>';
+	return '...  <a href="'. get_permalink($post->ID) . '" class="read-more" title="'. __('Read', 'hacksawtheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'hacksawtheme') .'</a>';
 }
 
 

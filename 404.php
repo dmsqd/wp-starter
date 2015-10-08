@@ -14,13 +14,13 @@
 
 									<header class="article-header">
 
-										<h1><?php _e("404 - Page Not Found", "dmsqdtheme"); ?></h1>
+										<h1><?php _e("404 - Page Not Found", "hacksawtheme"); ?></h1>
 
 									</header> <!-- end article header -->
 
 									<section class="entry-content">
 
-										<p><?php _e("The page you were looking for was not found. Please try searching.", "dmsqdtheme"); ?></p>
+										<p><?php _e("The page you were looking for was not found. Please try searching.", "hacksawtheme"); ?></p>
 
 									</section> <!-- end article section -->
 

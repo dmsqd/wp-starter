@@ -1,7 +1,7 @@
 <?php
 /*
-Author: DMSQD
-URL: htp://dmsqd.com/
+Author: Hacksaw
+URL: htp://hacksawstudio.com/
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -161,11 +161,11 @@ function bones_comments($comment, $args, $depth) {
 			    <!-- end custom gravatar call -->
 				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
-				<?php edit_comment_link(__('(Edit)', 'dmsqdtheme'),'  ','') ?>
+				<?php edit_comment_link(__('(Edit)', 'hacksawtheme'),'  ','') ?>
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
        			<div class="alert alert-info">
-          			<p><?php _e('Your comment is awaiting moderation.', 'dmsqdtheme') ?></p>
+          			<p><?php _e('Your comment is awaiting moderation.', 'hacksawtheme') ?></p>
           		</div>
 			<?php endif; ?>
 			<section class="comment_content clearfix">
@@ -182,8 +182,8 @@ function bones_comments($comment, $args, $depth) {
 // Search Form
 function bones_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <label class="screen-reader-text" for="s">' . __('Search for:', 'dmsqdtheme') . '</label>
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...', 'dmsqdtheme').'" />
+    <label class="screen-reader-text" for="s">' . __('Search for:', 'hacksawtheme') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...', 'hacksawtheme').'" />
     <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
     </form>';
     return $form;

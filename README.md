@@ -1,4 +1,4 @@
-##WP-Starter by DMSQD
+##WP-Starter by Hacksaw
 
 A good starting point for our WordPress projects, developed from Bones.
 

@@ -9,7 +9,7 @@ The comments page for Bones
 
   if ( post_password_required() ) { ?>
   	<div class="alert alert-help">
-    	<p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "dmsqdtheme"); ?></p>
+    	<p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "hacksawtheme"); ?></p>
   	</div>
   <?php
     return;
@@ -48,7 +48,7 @@ The comments page for Bones
 	<?php else : // comments are closed ?>
 
 	<!-- If comments are closed. -->
-	<!--p class="nocomments"><?php _e("Comments are closed.", "dmsqdtheme"); ?></p-->
+	<!--p class="nocomments"><?php _e("Comments are closed.", "hacksawtheme"); ?></p-->
 
 	<?php endif; ?>
 
@@ -59,7 +59,7 @@ The comments page for Bones
 
 <section id="respond" class="respond-form">
 
-	<h3 id="comment-form-title" class="h2"><?php comment_form_title( __('Leave a Reply', 'dmsqdtheme'), __('Leave a Reply to %s', 'dmsqdtheme' )); ?></h3>
+	<h3 id="comment-form-title" class="h2"><?php comment_form_title( __('Leave a Reply', 'hacksawtheme'), __('Leave a Reply to %s', 'hacksawtheme' )); ?></h3>
 
 	<div id="cancel-comment-reply">
 		<p class="small"><?php cancel_comment_reply_link(); ?></p>
@@ -75,41 +75,41 @@ The comments page for Bones
 
 	<?php if ( is_user_logged_in() ) : ?>
 
-	<p class="comments-logged-in-as"><?php _e("Logged in as", "dmsqdtheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Log out of this account", "dmsqdtheme"); ?>"><?php _e("Log out", "dmsqdtheme"); ?> <?php _e("&raquo;", "dmsqdtheme"); ?></a></p>
+	<p class="comments-logged-in-as"><?php _e("Logged in as", "hacksawtheme"); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e("Log out of this account", "hacksawtheme"); ?>"><?php _e("Log out", "hacksawtheme"); ?> <?php _e("&raquo;", "hacksawtheme"); ?></a></p>
 
 	<?php else : ?>
 
 	<ul id="comment-form-elements" class="clearfix">
 
 		<li>
-		  <label for="author"><?php _e("Name", "dmsqdtheme"); ?> <?php if ($req) _e("(required)"); ?></label>
-		  <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e('Your Name*', 'dmsqdtheme'); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+		  <label for="author"><?php _e("Name", "hacksawtheme"); ?> <?php if ($req) _e("(required)"); ?></label>
+		  <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e('Your Name*', 'hacksawtheme'); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
 		</li>
 
 		<li>
-		  <label for="email"><?php _e("Mail", "dmsqdtheme"); ?> <?php if ($req) _e("(required)"); ?></label>
-		  <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e('Your E-Mail*', 'dmsqdtheme'); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-		  <small><?php _e("(will not be published)", "dmsqdtheme"); ?></small>
+		  <label for="email"><?php _e("Mail", "hacksawtheme"); ?> <?php if ($req) _e("(required)"); ?></label>
+		  <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e('Your E-Mail*', 'hacksawtheme'); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+		  <small><?php _e("(will not be published)", "hacksawtheme"); ?></small>
 		</li>
 
 		<li>
-		  <label for="url"><?php _e("Website", "dmsqdtheme"); ?></label>
-		  <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e('Got a website?', 'dmsqdtheme'); ?>" tabindex="3" />
+		  <label for="url"><?php _e("Website", "hacksawtheme"); ?></label>
+		  <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e('Got a website?', 'hacksawtheme'); ?>" tabindex="3" />
 		</li>
 
 	</ul>
 
 	<?php endif; ?>
 
-	<p><textarea name="comment" id="comment" placeholder="<?php _e('Your Comment here...', 'dmsqdtheme'); ?>" tabindex="4"></textarea></p>
+	<p><textarea name="comment" id="comment" placeholder="<?php _e('Your Comment here...', 'hacksawtheme'); ?>" tabindex="4"></textarea></p>
 
 	<p>
-	  <input name="submit" type="submit" id="submit" class="button" tabindex="5" value="<?php _e('Submit', 'dmsqdtheme'); ?>" />
+	  <input name="submit" type="submit" id="submit" class="button" tabindex="5" value="<?php _e('Submit', 'hacksawtheme'); ?>" />
 	  <?php comment_id_fields(); ?>
 	</p>
 
 	<div class="alert alert-info">
-		<p id="allowed_tags" class="small"><strong>XHTML:</strong> <?php _e('You can use these tags', 'dmsqdtheme'); ?>: <code><?php echo allowed_tags(); ?></code></p>
+		<p id="allowed_tags" class="small"><strong>XHTML:</strong> <?php _e('You can use these tags', 'hacksawtheme'); ?>: <code><?php echo allowed_tags(); ?></code></p>
 	</div>
 
 	<?php do_action('comment_form', $post->ID); ?>

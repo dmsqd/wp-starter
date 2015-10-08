@@ -37,13 +37,13 @@
 
 		    					    <article id="post-not-found" class="hentry clearfix">
 		    					    	<header class="article-header">
-		    					    		<h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+		    					    		<h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
 		    					    	</header>
 		    					    	<section class="entry-content">
-		    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+		    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
 		    					    	</section>
 		    					    	<footer class="article-footer">
-		    					    	    <p><?php _e("This is the error message in the page.php template.", "dmsqdtheme"); ?></p>
+		    					    	    <p><?php _e("This is the error message in the page.php template.", "hacksawtheme"); ?></p>
 		    					    	</footer>
 		    					    </article>
 

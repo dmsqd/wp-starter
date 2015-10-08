@@ -12,12 +12,12 @@
 
 							    <?php if (is_category()) { ?>
 								    <h1 class="archive-title h2">
-									    <span><?php _e("Posts Categorised:", "dmsqdtheme"); ?></span> <?php single_cat_title(); ?>
+									    <span><?php _e("Posts Categorised:", "hacksawtheme"); ?></span> <?php single_cat_title(); ?>
 							    	</h1>
 
 							    <?php } elseif (is_tag()) { ?>
 								    <h1 class="archive-title h2">
-									    <span><?php _e("Posts Tagged:", "dmsqdtheme"); ?></span> <?php single_tag_title(); ?>
+									    <span><?php _e("Posts Tagged:", "hacksawtheme"); ?></span> <?php single_tag_title(); ?>
 								    </h1>
 
 							    <?php } elseif (is_author()) {
@@ -26,22 +26,22 @@
 							    ?>
 								    <h1 class="archive-title h2">
 
-								    	<span><?php _e("Posts By:", "dmsqdtheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
+								    	<span><?php _e("Posts By:", "hacksawtheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
 
 								    </h1>
 							    <?php } elseif (is_day()) { ?>
 								    <h1 class="archive-title h2">
-			    						<span><?php _e("Daily Archives:", "dmsqdtheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+			    						<span><?php _e("Daily Archives:", "hacksawtheme"); ?></span> <?php the_time('l, F j, Y'); ?>
 								    </h1>
 
 				    			<?php } elseif (is_month()) { ?>
 					    		    <h1 class="archive-title h2">
-						    	    	<span><?php _e("Monthly Archives:", "dmsqdtheme"); ?></span> <?php the_time('F Y'); ?>
+						    	    	<span><?php _e("Monthly Archives:", "hacksawtheme"); ?></span> <?php the_time('F Y'); ?>
 							        </h1>
 
 							    <?php } elseif (is_year()) { ?>
 							        <h1 class="archive-title h2">
-							    	    <span><?php _e("Yearly Archives:", "dmsqdtheme"); ?></span> <?php the_time('Y'); ?>
+							    	    <span><?php _e("Yearly Archives:", "hacksawtheme"); ?></span> <?php the_time('Y'); ?>
 							        </h1>
 							    <?php } ?>
 
@@ -53,7 +53,7 @@
 
 									    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-									    <p class="byline vcard"><?php _e("Posted", "dmsqdtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "dmsqdtheme"); ?> <?php the_category(', '); ?>.</p>
+									    <p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "hacksawtheme"); ?> <?php the_category(', '); ?>.</p>
 
 								    </header> <!-- end article header -->
 
@@ -78,8 +78,8 @@
 							        <?php } else { ?>
 								        <nav class="wp-prev-next">
 									        <ul class="clearfix">
-										        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "dmsqdtheme")) ?></li>
-										        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "dmsqdtheme")) ?></li>
+										        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "hacksawtheme")) ?></li>
+										        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "hacksawtheme")) ?></li>
 									        </ul>
 							    	    </nav>
 							        <?php } ?>
@@ -88,13 +88,13 @@
 
 		    					    <article id="post-not-found" class="hentry clearfix">
 		    						    <header class="article-header">
-		    							    <h1><?php _e("Oops, Post Not Found!", "dmsqdtheme"); ?></h1>
+		    							    <h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
 		    					    	</header>
 		    						    <section class="entry-content">
-		    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "dmsqdtheme"); ?></p>
+		    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
 		        						</section>
 		    	    					<footer class="article-footer">
-		    		    				    <p><?php _e("This is the error message in the archive.php template.", "dmsqdtheme"); ?></p>
+		    		    				    <p><?php _e("This is the error message in the archive.php template.", "hacksawtheme"); ?></p>
 		    			    			</footer>
 		    				    	</article>
 

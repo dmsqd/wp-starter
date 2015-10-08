@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author: DMSQD
+Author: Hacksaw
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -863,6 +863,28 @@ FOOTER
 .footer {
 	clear: both;
 }
+
+	.hacksaw {
+	    display: inline-block;
+	    vertical-align: baseline;
+
+	    text-indent: 100%;
+	    white-space: nowrap;
+	    overflow: hidden;
+
+	    transition: opacity 0.3s;
+	    opacity: 0.5;
+	    background-repeat: no-repeat;
+	    background-size: 91.5px 12px;
+	    width: 91.5px;
+	    height: 12px;
+	    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALcAAAAYCAMAAACP+pyWAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMD/VKahG1sewAAAfhJREFUeNqtl4tuwzAMA2Py//+5yAM9KIwcF6gGrLVEU+fFc5JNZ2xH1BEZUuQ99rCeZLrNsnepMXmZwqAKj9/H5zbO8Km4RphrXFF7ehC+Esz8lkLsjag53dwYCIIjN6wxptw4kENGqHKbfIrVOTMqC79b70O/c0dDVISLuRpssuGc3Dkw3MMtdyI6crjDHdc/sDtnI1BRB7en3NGVXKLAHdt2vk1wFgpqJq9DtK9q/5lz66GlH7DJUq5qS8aD1eeVcXDjR8y5ne40tCTFVQb7yjMU2DgjRloqpjuBxnvMt4RYGkaGI7TkOeh7Z7hLxUgaA6JuEzuOVjTwJTYWzK9pnMlJxYh2y9wY5WmqGbcbf9/kxhmp8ELxCzdTYH3jji6a/kX4gof9/U/hw8vc+PBtmdszcNR8Qzl8ZcpIP3DnWbTCnWVHIZ2VZ6ODqD1PXG8ERDZyz52NRNmtc+VWPLutnt8eGa/nIGWgi8CNMxo6EVrkpkLwLMmJHPedzXdwxd5onCtplW1r3JB0G6V//h6QYMkWdDrTs5r6R248Mt6fq1Saqb1ivUuOvMqdDdFlRfH83Wsnzv2atc5tplDpltS+77hdIjDpnO9769zdI5aQJUz2UyjD2Q81l4pXuXMKiYX3YjWHtcMIddyNQ/qfkE9LL2n30PbH+AC17g2lLt/BnAAAAABJRU5ErkJggg==);
+
+	    &:hover, &:active {
+	        opacity: 1;
+	    }
+
+	}
 
 	/*
 	if you checked out the link above:

@@ -1,6 +1,6 @@
 /*!
- * Crafted by DMSQD
- * dmsqd.com
+ * Created by Hacksaw
+ * hacksawstudio.com
  */
 
 // IE8 ployfill for GetComputed Style (for Responsive Script below)
