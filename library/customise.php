@@ -12,7 +12,6 @@ add_action( 'customize_register', 'dm2_customize_register' );
 function dm2_customize_register($wp_customize) {
 
     // SECTION
-
     $wp_customize->add_section( 'social_links' , array(
         'title'      => __('Social Links','hacksawtheme'),
         'priority'   => 40,

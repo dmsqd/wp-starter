@@ -23,29 +23,11 @@
 									    <?php the_content(); ?>
 									</section> <!-- end article section -->
 
-								    <footer class="article-footer">
-
-									    <?php //the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-
-								    </footer> <!-- end article footer -->
-
 								    <?php //comments_template(); ?>
 
 							    </article> <!-- end article -->
 
-							    <?php endwhile; else : ?>
-
-		    					    <article id="post-not-found" class="hentry clearfix">
-		    					    	<header class="article-header">
-		    					    		<h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
-		    					    	</header>
-		    					    	<section class="entry-content">
-		    					    		<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
-		    					    	</section>
-		    					    	<footer class="article-footer">
-		    					    	    <p><?php _e("This is the error message in the front-page.php template.", "hacksawtheme"); ?></p>
-		    					    	</footer>
-		    					    </article>
+							    <?php endwhile; ?>
 
 							    <?php endif; ?>
 

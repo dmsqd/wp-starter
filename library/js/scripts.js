@@ -3,7 +3,6 @@
  * hacksawstudio.com
  */
 
-
 /*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
@@ -101,11 +100,6 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
   loadGravatars();
-
 
 }); /* end of as page load scripts */

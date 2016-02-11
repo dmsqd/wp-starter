@@ -142,7 +142,7 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
-		wp_enqueue_script( 'bones-modernizr' );
+		// wp_enqueue_script( 'bones-modernizr' );
 		wp_enqueue_style( 'bones-stylesheet' );
 		wp_enqueue_style( 'bones-ie-only' );
 
@@ -173,6 +173,7 @@ function bones_theme_support() {
 	set_post_thumbnail_size(125, 125, true);
 
 	// wp custom background (thx to @bransonwerner for update)
+    /*
 	add_theme_support( 'custom-background',
 	    array(
 	    'default-image' => '',    // background image default
@@ -182,6 +183,7 @@ function bones_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
+    */
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');
