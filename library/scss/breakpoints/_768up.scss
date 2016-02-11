@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author: Hacksaw
+Author:
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -14,40 +14,37 @@ come into play. Have fun!
 
 
 /*********************
-GENERAL
+GENERAL STYLES
 *********************/
 
 body {}
 
 /*********************
-LAYOUT & GRID
+LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 85%;
-	max-width: 1140px;
+	width: 760px;
 }
 
 /*********************
-HEADER
+HEADER STYLES
 *********************/
 
 .header {}
 
-	.logo {}
-
-	.nav-toggle {
-		display: none!important;
-	}
+	#logo {}
 
 /*********************
-NAVIGATION
+NAVIGATION STYLES
 *********************/
 
 .nav {
-	display: block!important;
 	border: 0;
-
+	ul {
+		background:$black;
+		margin-top:0;
+	}
 	li {
 		float: left;
 		position: relative;
@@ -60,8 +57,8 @@ NAVIGATION
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: $accent;
 				color: $white;
+				text-decoration: underline;
 			}
 		}
 
@@ -73,10 +70,11 @@ NAVIGATION
 		*/
 		ul.sub-menu,
 		ul.children {
-			border: $border;
+			margin-top: 0;
+			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
-			display: none;
+			visibility: hidden;
 			z-index: 8999;
 
 			li {
@@ -86,7 +84,7 @@ NAVIGATION
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: $border;
+					border-bottom: 1px solid #ccc;
 
 					&:hover,
 					&:focus {}
@@ -104,17 +102,13 @@ NAVIGATION
 				}
 
 				/*
-				Third plus level menus - go as deep as you like,
-				I got your back bro
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
 				*/
 				ul {
-					display: none;
-					margin-left: 100%;
-					top: 5px;
-				}
-				&:hover > ul {
-					left: auto;
-					display: block;
+					top:0;
+					left:100%;
 				}
 			}
 
@@ -127,9 +121,9 @@ NAVIGATION
 		}
 
 		/* showing sub-menus */
-		&:hover ul {
+		&:hover > ul {
 			top: auto;
-			display: block;
+			visibility:visible;
 		}
 
 	} /* end .menu ul li */
@@ -152,7 +146,7 @@ SIDEBARS & ASIDES
 }
 
 	.widgettitle {
-		border-bottom: $border;
+		border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 
@@ -267,7 +261,7 @@ SIDEBARS & ASIDES
 
 
 /*********************
-FOOTER
+FOOTER STYLES
 *********************/
 
 /*

@@ -1,84 +1,78 @@
+<?php
+/*
+ * CUSTOM POST TYPE ARCHIVE TEMPLATE
+ *
+ * This is the custom post type archive template. If you edit the custom post type name,
+ * you've got to change the name of this template to reflect that name change.
+ *
+ * For Example, if your custom post type is called "register_post_type( 'bookmarks')",
+ * then your template name should be archive-bookmarks.php
+ *
+ * For more info: http://codex.wordpress.org/Post_Type_Templates
+*/
+?>
+
 <?php get_header(); ?>
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap">
+				<div id="inner-content" class="wrap cf">
 
-					<div class="grid">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<div class="grid__item lap--two-thirds desk--three-quarters">
+						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
-						    <div id="main" class="main clearfix" role="main">
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-								<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-							    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<header class="article-header">
 
-							    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<p class="byline vcard"><?php
+										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
+									?></p>
 
-								    <header class="article-header">
+								</header>
 
-									    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<section class="entry-content cf">
 
-									    <p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "hacksawtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span>.</p>
+									<?php the_excerpt(); ?>
 
-								    </header> <!-- end article header -->
+								</section>
 
-								    <section class="entry-content clearfix">
+								<footer class="article-footer">
 
-									    <?php the_excerpt(); ?>
+								</footer>
 
-								    </section> <!-- end article section -->
+							</article>
 
-								    <footer class="article-footer">
+							<?php endwhile; ?>
 
-								    </footer> <!-- end article footer -->
+									<?php bones_page_navi(); ?>
 
-							    </article> <!-- end article -->
+							<?php else : ?>
 
-							    <?php endwhile; ?>
+									<article id="post-not-found" class="hentry cf">
+										<header class="article-header">
+											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+										</header>
+										<section class="entry-content">
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+										</section>
+										<footer class="article-footer">
+												<p><?php _e( 'This is the error message in the custom posty type archive template.', 'bonestheme' ); ?></p>
+										</footer>
+									</article>
 
-							        <?php if (function_exists('bones_page_navi')) { ?>
-							            <?php bones_page_navi(); ?>
-							        <?php } else { ?>
-							            <nav class="wp-prev-next">
-							                <ul class="clearfix">
-							        	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "hacksawtheme")) ?></li>
-							        	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "hacksawtheme")) ?></li>
-							                </ul>
-							            </nav>
-							        <?php } ?>
+							<?php endif; ?>
 
-							    <?php else : ?>
+						</main>
 
-		    					    <article id="post-not-found" class="hentry clearfix">
-		    						    <header class="article-header">
-		    							    <h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
-		    					    	</header>
-		    						    <section class="entry-content">
-		    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
-		        						</section>
-		    	    					<footer class="article-footer">
-		    		    				    <p><?php _e("This is the error message in the custom posty type archive template.", "hacksawtheme"); ?></p>
-		    			    			</footer>
-		    				    	</article>
+					<?php get_sidebar(); ?>
 
-							    <?php endif; ?>
+				</div>
 
-		    				</div> <!-- end #main -->
-
-		    			</div><!--
-
-	    			 --><div class="grid__item lap--one-third desk--one-quarter">
-
-			    			<?php get_sidebar('blog-sidebar'); ?>
-
-	    				</div>
-
-					</div><!-- end .grid -->
-
-                </div> <!-- end #inner-content -->
-
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

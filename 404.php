@@ -2,43 +2,42 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap">
+				<div id="inner-content" class="wrap cf">
 
-					<div class="grid">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<div class="grid__item lap--two-thirds desk--three-quarters">
+						<article id="post-not-found" class="hentry cf">
 
-							<div id="main" class="clearfix" role="main">
+							<header class="article-header">
 
-								<article id="post-not-found" class="hentry clearfix">
+								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
 
-									<header class="article-header">
+							</header>
 
-										<h1><?php _e("404 - Page Not Found", "hacksawtheme"); ?></h1>
+							<section class="entry-content">
 
-									</header> <!-- end article header -->
+								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
 
-									<section class="entry-content">
+							</section>
 
-										<p><?php _e("The page you were looking for was not found. Please try searching.", "hacksawtheme"); ?></p>
+							<section class="search">
 
-									</section> <!-- end article section -->
+									<p><?php get_search_form(); ?></p>
 
-									<section class="search">
+							</section>
 
-									    <p><?php get_search_form(); ?></p>
+							<footer class="article-footer">
 
-									</section> <!-- end search section -->
+									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
 
-								</article> <!-- end article -->
+							</footer>
 
-							</div> <!-- end #main -->
-						</div>
+						</article>
 
-					</div><!-- end .grid -->
+					</main>
 
-				</div> <!-- end #inner-content -->
+				</div>
 
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

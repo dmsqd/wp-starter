@@ -2,82 +2,73 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap">
+				<div id="inner-content" class="wrap cf">
 
-					<div class="grid">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
-						<div class="grid__item lap--two-thirds desk--three-quarters">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<div id="main" class="main clearfix" role="main">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
-								<h1 class="archive-title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
+								<header class="entry-header article-header">
 
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+                  						<p class="byline entry-meta vcard">
+                    							<?php printf( __( 'Posted %1$s by %2$s', 'bonestheme' ),
+                   							    /* the time the post was published */
+                   							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+                      							    /* the author of the post */
+                       							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                    							); ?>
+                  						</p>
 
+								</header>
+
+								<section class="entry-content">
+										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
+
+								</section>
+
+								<footer class="article-footer">
+
+									<?php if(get_the_category_list(', ') != ''): ?>
+                  					<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+                  					<?php endif; ?>
+
+                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+								</footer> <!-- end article footer -->
+
+							</article>
+
+						<?php endwhile; ?>
+
+								<?php bones_page_navi(); ?>
+
+							<?php else : ?>
+
+									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-
-											<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-											<p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "hacksawtheme"); ?> <?php the_category(', '); ?>.</p>
-
-										</header> <!-- end article header -->
-
+											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
+										</header>
 										<section class="entry-content">
-										    <?php the_excerpt('<span class="read-more">Read more &raquo;</span>'); ?>
-
-										</section> <!-- end article section -->
-
+											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
+										</section>
 										<footer class="article-footer">
+												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
+										</footer>
+									</article>
 
-										</footer> <!-- end article footer -->
+							<?php endif; ?>
 
-									</article> <!-- end article -->
+						</main>
 
-								<?php endwhile; ?>
+							<?php get_sidebar(); ?>
 
-								    <?php if (function_exists('bones_page_navi')) { ?>
-								        <?php bones_page_navi(); ?>
-								    <?php } else { ?>
-								        <nav class="wp-prev-next">
-								            <ul class="clearfix">
-								    	        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "hacksawtheme")) ?></li>
-								    	        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "hacksawtheme")) ?></li>
-								            </ul>
-								        </nav>
-								    <?php } ?>
+					</div>
 
-							    <?php else : ?>
-
-		    					    <article id="post-not-found" class="hentry clearfix">
-		    					    	<header class="article-header">
-		    					    		<h1><?php _e("Sorry, No Results.", "hacksawtheme"); ?></h1>
-		    					    	</header>
-		    					    	<section class="entry-content">
-		    					    		<p><?php _e("Try your search again.", "hacksawtheme"); ?></p>
-		    					    	</section>
-		    					    	<footer class="article-footer">
-		    					    	    <p><?php _e("This is the error message in the search.php template.", "hacksawtheme"); ?></p>
-		    					    	</footer>
-		    					    </article>
-
-							    <?php endif; ?>
-
-						    </div> <!-- end #main -->
-
-	    			    </div><!--
-
-	    			 --><div class="grid__item lap--one-third desk--one-quarter">
-
-		    				<?php get_sidebar(); ?>
-
-	    				</div>
-
-					</div><!-- end .grid -->
-
-    			</div> <!-- end #inner-content -->
-
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author: Hacksaw
+Author:
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -12,15 +12,17 @@ and will be used across all viewports.
 ******************************************************************/
 
 /*********************
-GENERAL
+GENERAL STYLES
 *********************/
 
 body {
-	font-family: $sans-serif;
+	font-family: $lato;
 	font-size: 100%;
-	font-weight: 400;
 	line-height: 1.5;
-	color: $black;
+	color: $text-color;
+	background-color: $gray;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
 }
 
 /********************
@@ -65,16 +67,16 @@ style a page via class
 	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
 
 /*********************
-LAYOUT & GRID
+LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 80%;
+	width: 96%;
 	margin: 0 auto;
 }
 
 /*********************
-LINKS
+LINK STYLES
 *********************/
 
 a, a:visited {
@@ -102,12 +104,12 @@ a, a:visited {
 }
 
 /******************************************************************
-H1, H2, H3, H4, H5
+H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: $sans-serif;
-	font-weight: 400;
+	text-rendering: optimizelegibility;
+	font-weight: 500;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -147,27 +149,23 @@ h5, .h5 {
 }
 
 /*********************
-HEADER
+HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	background-color: $black;
+}
 
-	.inner-header {
-	}
+	#logo {
+		margin: 0.75em 0;
 
-	.logo {
-		img {
-			max-width: 100%;
-			height: auto;
+		a {
+			color: $white;
 		}
 	}
 
-	.nav-toggle {
-		display: none; // will show using js
-	}
-
 /*********************
-NAVIGATION
+NAVIGATION STYLES
 *********************/
 
 /*
@@ -179,22 +177,16 @@ and more scalable.
 */
 
 .nav {
-	border: $border;
 	border-bottom: 0;
-	padding: 0;
-
-	ul {
-		margin: 0;
-	}
+	margin: 0;
 
 	li {
 
 		a {
 			display: block;
+			color: $white;
 			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: $border;
+			padding: 0.75em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -220,8 +212,6 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
-			margin: 0;
-			padding: 0;
 
 			li {
 
@@ -248,47 +238,58 @@ and more scalable.
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
-	li.current-page-ancestor {
+	li.current_page_ancestor {
 
-		& > a {}
+		a {}
 
 	}  /* end current highlighters */
 
 } /* end .nav */
 
-	/**
-	 * Individual navs/overrides
-	 */
-
-	.top-nav {}
-
-	.footer-nav {}
-
 
 /*********************
-POSTS & CONTENT
+POSTS & CONTENT STYLES
 *********************/
 
-.content {
-	margin-top: 2.2em;
+#content {
+	margin-top: 1.5em;
 }
 
 		.hentry {
+			background-color: $white;
+			border-radius: 3px;
+			margin-bottom: 1.5em;
+			border: 1px solid $border-color;
 
-			header {}
+			header {
+				border-bottom: 1px solid $light-gray;
+				padding: 1.5em;
+			}
 
-			footer {}
+			footer {
+				padding: 1.5em;
+				border-top: 1px solid $light-gray;
+
+				p {
+					margin: 0;
+				}
+			}
 
 		} /* end .hentry */
 
 		.single-title,
-		.page-title {}
+		.page-title,
+		.entry-title {
+			margin: 0;
+		}
 
 		.single-title {}
 
 		.page-title {}
 
-		.archive-title { }
+		.entry-title {}
+
+		.archive-title {}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
@@ -302,61 +303,89 @@ POSTS & CONTENT
 
 		/* post meta */
 		.byline {
-			color: #999;
+			color: $meta-gray;
+			font-style: italic;
+			margin: 0;
 
 			time {}
 		}
 
 		/* entry content */
 		.entry-content {
+			padding: 1.5em 1.5em 0;
 
-			p {}
+			p {
+				margin: 0 0 1.5em;
+			}
 
 
 			ul, ol, table, dl {}
 
 			ul, ol {
-				margin-left: 1.1em; //indents bullets to level with content
 
 				li {}
 
 			}
 
-			/*
-			Allow inline ol or uls. Adds in the bullet or counter using pseudo content
-			 */
-			ul.inline,
-			ol.inline {
-				margin: 1em 0;
-				counter-reset:li; /* Initiate a counter */
-				li {
-					display: inline;
-					margin: 0 0.5em 0 0;
-				}
-			}
-				ol.inline li:before {
-					content:counter(li) ': '; /* Use the counter as content */
-				    counter-increment:li; /* Increment the counter by 1 */
-				}
-				ul.inline li:before {
-					content: '• ';
-				}
-
 			ul {
-				list-style-type: disc;
 
 				li {}
 
 			}
 
 			ol {
-				list-style-type: decimal;
 
 				li {}
 
 			}
 
+			table {
+				width: 100%;
+				border: 1px solid $gray;
+				margin-bottom: 1.5em;
+
+				caption {
+					margin: 0 0 7px;
+					font-size: 0.75em;
+					color: $meta-gray;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+				}
+			}
+
+			tr {
+				border-bottom: 1px solid $gray;
+
+				&:nth-child(even) {
+					background-color: $light-gray;
+				}
+			}
+
+			td {
+				padding: 7px;
+				border-right: 1px solid $gray;
+
+				&:last-child {
+					border-right: 0;
+				}
+			}
+
+			th {
+				background-color: $light-gray;
+				border-bottom: 1px solid $gray;
+				border-right: 1px solid $gray;
+
+				&:last-child {
+					border-right: 0;
+				}
+			}
+
 			blockquote {
+				margin: 0 0 1.5em 0.75em;
+				padding: 0 0 0 0.75em;
+				border-left: 3px solid $blue;
+				font-style: italic;
+				color: $meta-gray;
 
 				&:before {}
 
@@ -389,15 +418,22 @@ POSTS & CONTENT
 			.alignright, img.alignright {}
 			.aligncenter, img.aligncenter {}
 
-			video, object {
+			.size-auto,
+			.size-full,
+			.size-large,
+			.size-medium,
+			.size-thumbnail {
 				max-width: 100%;
 				height: auto;
 			}
 
 			pre {
-				background: #eee;
-				border: 1px solid #cecece;
-				padding: 10px;
+				background: $black;
+				color: $light-gray;
+				font-size: 0.9em;
+				padding: 1.5em;
+				margin: 0 0 1.5em;
+				border-radius: 3px;
 			}
 
 		} /* end .entry-content */
@@ -447,101 +483,69 @@ POSTS & CONTENT
 		.size-medium {}
 		.size-thumbnail {}
 
+	// the tag output
+	.tags {
+		margin: 0;
+	}
+
 /******************************************************************
-PAGE NAVI
+PAGE NAVI STYLES
 ******************************************************************/
 
-.page-navigation,
+.pagination,
 .wp-prev-next {
-	margin: 1.1em 0 2.2em;
+	margin: 1.5em 0;
 }
-	.bones_page_navi {
+	.pagination{
+    text-align: center;
 
-		li {
-			float: left;
-			margin-left: 10px;
+    ul {
+      display: inline-block;
+      background-color: $white;
+      white-space: nowrap;
+      padding: 0;
+      clear: both;
+      border-radius: 3px;
+    }
 
-			a {
-				padding: 3px 6px;
-				display: block;
-				text-decoration: none;
-				position: relative;
+    li {
+      padding: 0;
+      margin: 0;
+      float: left;
+      display: inline;
+      overflow: hidden;
+      border-right: 1px solid $gray;
+    }
 
-				&:hover,
-				&:focus {
-					color: #f01d4f;
-					text-decoration: underline;
-				}
-			}
+    a, span {
+      margin: 0;
+      text-decoration: none;
+      padding: 0;
+      line-height: 1em;
+      font-size: 1em;
+      font-weight: normal;
+      padding: 0.75em;
+      min-width: 1em;
+      display: block;
+      color: $blue;
 
-		}
+      &:hover, &:focus {
+      	background-color: $blue;
+      	color: $white;
+      }
+    }
 
-		/* current page link */
-		li.bpn-current {
-			padding: 3px 6px;
-			border-bottom: 2px solid #f01d4f;
-			position: relative;
+    .current{
+    	cursor: default;
+    	color: $text-color;
 
-			a {
-				/* hovering on current page link */
-				&:hover,
-				&:focus {}
+    	&:hover, &:focus {
+    		background-color: $white;
+    		color: $text-color;
+    	}
+    }
 
-			}
-
-		} /* end .bones_page_navi .bpn-current */
-
-		/* common styles for page-navi links */
-		li.bpn-prev-link,
-		li.bpn-next-link {
-			font-weight: 700;
-
-			a {
-				padding: 0;
-			}
-		}
-
-		/* remove the bg on end links */
-		li.bpn-prev-link a:hover,
-		li.bpn-next-link a:hover,
-		li.bpn-first-page-link a:hover,
-		li.bpn-last-page-link a:hover {
-			background: none;
-		}
-
-		/* previous link */
-		li.bpn-prev-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-		/* next page link */
-		li.bpn-next-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-		/* first page link */
-		li.bpn-first-page-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-		/* last page link */
-		li.bpn-last-page-link {
-			a {
-				&:hover,
-				&:focus {}
-			}
-		}
-
-	} /* end .bones_page_navi */
+  } /* end .bones_page_navi */
 
 	/* fallback previous & next links */
 	.wp-prev-next {
@@ -559,11 +563,14 @@ PAGE NAVI
 	} /* end .wp-prev-next */
 
 /******************************************************************
-COMMENTS
+COMMENT STYLES
 ******************************************************************/
 
 /* h3 comment title */
-#comments {
+#comments-title {
+	padding: 0.75em;
+	margin: 0;
+	border-top: 1px solid $light-gray;
 
 	/* number of comments span */
 	span {}
@@ -581,76 +588,21 @@ COMMENTS
 
 
 .commentlist {
+	margin: 0;
+	list-style-type: none;
+}
 
-	li {
-		position: relative;
-		clear: both;
-		overflow: hidden;
-		list-style-type: none;
-		margin-bottom: 1.5em;
-		padding: 0.7335em 10px;
+.comment {
+	position: relative;
+	clear: both;
+	overflow: hidden;
+	padding: 1.5em;
+	border-bottom: 1px solid $light-gray;
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-
-		ul.children {
-			margin: 0;
-
-			li {}
-
-			/* variations */
-			.comment {}
-			.alt {}
-			.odd {}
-			.even {}
-			.depth-1 {}           /* change number for different depth */
-			.byuser {}
-			.bypostauthor {}
-			.comment-author-admin {}
-
-		} /* end .commentlist li ul.children */
+	.comment-author {
+		padding: 7px;
+		border: 0;
 	}
-
-	li[class*=depth-] {
-		margin-top: 1.1em;
-	}
-
-	li.depth-1 {
-		margin-left: 0;
-		margin-top: 0;
-	}
-
-	li:not(.depth-1) {
-		margin-right: -10px;
-		margin-left: -10px;
-		margin-top: 0;
-		padding-bottom: 0;
-	}
-
-	li.depth-2 {}
-	li.depth-3 {}
-	li.depth-4 {}
-	li.depth-5 {}
-
-	/* general comment classes */
-	.alt {}
-	.odd {
-		background: #eee;
-	}
-	.even {
-		background: #fefefe;
-	}
-	.parent {}
-	.comment {}
-	.children {}
-	.pingback {}
-	.bypostauthor {}
-	.comment-author {}
-	.comment-author-admin {}
-	.thread-alt {}
-	.thread-odd {}
-	.thread-even {}
 
 	/* vcard */
 	.vcard {
@@ -665,10 +617,12 @@ COMMENTS
 		}
 
 		time {
-			float: right;
+			display: block;
+			font-size: 0.9em;
+			font-style: italic;
 
 			a {
-				color: #999;
+				color: $meta-gray;
 				text-decoration: none;
 
 				&:hover {
@@ -679,17 +633,79 @@ COMMENTS
 
 		}
 
-		img.photo {}
+		.photo {}
 
-		img.avatar {
+		.avatar {
 			position: absolute;
-			left: 10px;
-			padding: 2px;
-			border: 1px solid #cecece;
-			background: #fff;
+			left: 16px;
+			border-radius: 50%;
 		}
 
 	} /* end .commentlist .vcard */
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.children {
+		margin: 0;
+
+		li {}
+
+			/* variations */
+			.comment {}
+			.alt {}
+			.odd {}
+			.even {}
+			.depth-1 {}           /* change number for different depth */
+			.byuser {}
+			.bypostauthor {}
+			.comment-author-admin {}
+
+	} /* end children */
+
+
+	&[class*=depth-] {
+		margin-top: 1.1em;
+	}
+
+	&.depth-1 {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	&:not(.depth-1) {
+		margin-top: 0;
+		margin-left: 7px;
+		padding: 7px;
+	}
+
+	&.depth-2 {}
+	&.depth-3 {}
+	&.depth-4 {}
+	&.depth-5 {}
+
+	/* general comment classes */
+	&.alt {}
+	&.odd {
+		background-color: $white;
+	}
+	&.even {
+		background: $light-gray;
+	}
+	&.parent {}
+	&.comment {}
+	&.children {}
+	&.pingback {}
+	&.bypostauthor {}
+	&.comment-author {}
+	&.comment-author-admin {}
+	&.thread-alt {}
+	&.thread-odd {}
+	&.thread-even {}
+}
+
+
 
 
 	/* comment meta */
@@ -707,7 +723,6 @@ COMMENTS
 
 	/* comment content */
 	.comment_content {
-		margin-left: 50px;
 
 		p {
 			margin: 0.7335em 0 1.5em;
@@ -719,90 +734,66 @@ COMMENTS
 
 	/* comment reply link */
 	.comment-reply-link {
-		text-decoration: none;
-		float: right;
-		background: #4598bb;
-		padding: 3px 5px;
-		color: #fff;
-		opacity: 0.65;
-		margin-bottom: 10px;
-		font-weight: 700;
+		@extend .blue-btn;
 		font-size: 0.9em;
+		float: right;
 
 		&:hover,
 		&:focus {
-			opacity: 1;
 		}
 
 	} /* end .commentlist .comment-reply-link */
 
-} /* end .commentlist */
+	/* edit comment link */
+	.comment-edit-link {
+		font-style: italic;
+		margin: 0 7px;
+		text-decoration: none;
+		font-size: 0.9em;
+	}
+
+
 
 /******************************************************************
-COMMENT FORM
+COMMENT FORM STYLES
 ******************************************************************/
 
-.respond-form {
-	margin: 1.5em 10px;
-	padding-bottom: 2.2em;
-
-	form {
-		margin: 0.75em 0;
-
-		li {
-			list-style-type: none;
-			clear: both;
-			margin-bottom: 0.7335em;
-
-			label,
-			small {
-				display: none;
-			}
-		}
-
-		input[type=text],
-		input[type=email],
-		input[type=url],
-		textarea {
-			padding: 3px 6px;
-			background: #efefef;
-			border: 2px solid #cecece;
-			line-height: 1.5em;
-
-			&:focus {
-				background: #fff;
-			}
-
-			/* form validation */
-			&:invalid {
-				outline: none;
-				border-color: #fbc2c4;
-				background-color: #f6e7eb;
-				-webkit-box-shadow: none;
-				   -moz-box-shadow: none;
-				    -ms-box-shadow: none;
-						box-shadow: none;
-			}
-		}
-
-		input[type=text],
-		input[type=email],
-		input[type=url] {
-			max-width: 400px;
-			min-width: 250px;
-		}
-
-		textarea {
-			resize: none;
-			width: 97.3%;
-			height: 150px;
-		}
-
-	}
+.comment-respond {
+	@extend .cf;
+	padding: 1.5em;
+	border-top: 1px solid $light-gray;
 }
 
+	#reply-title {
+		margin: 0;
+	}
+
+	.logged-in-as {
+		color: $meta-gray;
+		font-style: italic;
+		margin: 0;
+
+		a {
+			color: $text-color;
+		}
+	}
+
+	.comment-form-comment {
+		margin: 1.5em 0 0.75em;
+	}
+
+	.form-allowed-tags {
+		padding: 1.5em;
+		background-color: $light-gray;
+		font-size: 0.9em;
+	}
+
 	/* comment submit button */
-	#submit {}
+	#submit {
+		@extend .blue-btn;
+		float: right;
+		font-size: 1em;
+	}
 
 	/* comment form title */
 	#comment-form-title {
@@ -856,35 +847,24 @@ SIDEBARS & ASIDES
 
 	}
 
+	.no-widgets {
+		background-color: $white;
+		padding: 1.5em;
+		text-align: center;
+		border: 1px solid $border-color;
+		border-radius: 2px;
+		margin-bottom: 1.5em;
+	}
+
 /*********************
-FOOTER
+FOOTER STYLES
 *********************/
 
 .footer {
 	clear: both;
+	background-color: $black;
+	color: $light-gray;
 }
-
-	.hacksaw {
-	    display: inline-block;
-	    vertical-align: baseline;
-
-	    text-indent: 100%;
-	    white-space: nowrap;
-	    overflow: hidden;
-
-	    transition: opacity 0.3s;
-	    opacity: 0.5;
-	    background-repeat: no-repeat;
-	    background-size: 91.5px 12px;
-	    width: 91.5px;
-	    height: 12px;
-	    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALcAAAAYCAMAAACP+pyWAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMD/VKahG1sewAAAfhJREFUeNqtl4tuwzAMA2Py//+5yAM9KIwcF6gGrLVEU+fFc5JNZ2xH1BEZUuQ99rCeZLrNsnepMXmZwqAKj9/H5zbO8Km4RphrXFF7ehC+Esz8lkLsjag53dwYCIIjN6wxptw4kENGqHKbfIrVOTMqC79b70O/c0dDVISLuRpssuGc3Dkw3MMtdyI6crjDHdc/sDtnI1BRB7en3NGVXKLAHdt2vk1wFgpqJq9DtK9q/5lz66GlH7DJUq5qS8aD1eeVcXDjR8y5ne40tCTFVQb7yjMU2DgjRloqpjuBxnvMt4RYGkaGI7TkOeh7Z7hLxUgaA6JuEzuOVjTwJTYWzK9pnMlJxYh2y9wY5WmqGbcbf9/kxhmp8ELxCzdTYH3jji6a/kX4gof9/U/hw8vc+PBtmdszcNR8Qzl8ZcpIP3DnWbTCnWVHIZ2VZ6ODqD1PXG8ERDZyz52NRNmtc+VWPLutnt8eGa/nIGWgi8CNMxo6EVrkpkLwLMmJHPedzXdwxd5onCtplW1r3JB0G6V//h6QYMkWdDrTs5r6R248Mt6fq1Saqb1ivUuOvMqdDdFlRfH83Wsnzv2atc5tplDpltS+77hdIjDpnO9769zdI5aQJUz2UyjD2Q81l4pXuXMKiYX3YjWHtcMIddyNQ/qfkE9LL2n30PbH+AC17g2lLt/BnAAAAABJRU5ErkJggg==);
-
-	    &:hover, &:active {
-	        opacity: 1;
-	    }
-
-	}
 
 	/*
 	if you checked out the link above:
@@ -907,4 +887,3 @@ FOOTER
 
 
 	.copyright {}
-

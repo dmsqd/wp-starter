@@ -1,34 +1,34 @@
-			<footer class="footer" role="contentinfo">
+			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="inner-footer wrap">
+				<div id="inner-footer" class="wrap cf">
 
-					<div class="grid">
+					<nav role="navigation">
+						<?php wp_nav_menu(array(
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
+    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
+    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
+    					'theme_location' => 'footer-links',             // where it's located in the theme
+    					'before' => '',                                 // before the menu
+    					'after' => '',                                  // after the menu
+    					'link_before' => '',                            // before each link
+    					'link_after' => '',                             // after each link
+    					'depth' => 0,                                   // limit the depth of the nav
+    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+						)); ?>
+					</nav>
 
-						<nav role="navigation" class="grid__item">
-	    					<?php bones_footer_links(); ?>
-		                </nav><!--
+					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
-		             --><div class="grid__item lap--one-third desk--one-third">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+				</div>
 
-							<?php echo get_option('facebook_url') ? '<a href="'.get_option('facebook_url').'" class="fb">Facebook</a>' : ''; ?>
-							<?php echo get_option('twitter_url') ? '<a href="'.get_option('twitter_url').'" class="twitter">Twitter</a>' : ''; ?>
-							<?php echo get_option('linkedin_url') ? '<a href="'.get_option('linkedin_url').'" class="linkedin">LinkedIn</a>' : ''; ?>
+			</footer>
 
-							<p class="attribution"><a href="http://www.hacksawstudio.com/" class="hacksaw" title="Created by Hacksaw">Hacksaw</a></p>
-		                </div>
+		</div>
 
-					</div><!-- end .grid -->
-
-				</div> <!-- end #inner-footer -->
-
-			</footer> <!-- end footer -->
-
-		</div> <!-- end #container -->
-
-		<!-- all js scripts are loaded in library/bones.php -->
+		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
 
 	</body>
 
-</html> <!-- end page. what a ride! -->
+</html> <!-- end of site. what a ride! -->

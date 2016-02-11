@@ -2,118 +2,73 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap">
+				<div id="inner-content" class="wrap cf">
 
-					<div class="grid">
+						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<div class="grid__item lap--two-thirds desk--three-quarters">
+							<?php
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_description( '<div class="taxonomy-description">', '</div>' );
+							?>
+							
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						    <div id="main" class="main clearfix" role="main">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-							    <?php if (is_category()) { ?>
-								    <h1 class="archive-title h2">
-									    <span><?php _e("Posts Categorised:", "hacksawtheme"); ?></span> <?php single_cat_title(); ?>
-							    	</h1>
+								<header class="entry-header article-header">
 
-							    <?php } elseif (is_tag()) { ?>
-								    <h1 class="archive-title h2">
-									    <span><?php _e("Posts Tagged:", "hacksawtheme"); ?></span> <?php single_tag_title(); ?>
-								    </h1>
+									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+									<p class="byline entry-meta vcard">
+										<?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
+                  							     /* the time the post was published */
+                  							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+                       								/* the author of the post */
+                       								'<span class="by">'.__('by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                    							); ?>
+									</p>
 
-							    <?php } elseif (is_author()) {
-							    	global $post;
-							    	$author_id = $post->post_author;
-							    ?>
-								    <h1 class="archive-title h2">
+								</header>
 
-								    	<span><?php _e("Posts By:", "hacksawtheme"); ?></span> <?php echo get_the_author_meta('display_name', $author_id); ?>
+								<section class="entry-content cf">
 
-								    </h1>
-							    <?php } elseif (is_day()) { ?>
-								    <h1 class="archive-title h2">
-			    						<span><?php _e("Daily Archives:", "hacksawtheme"); ?></span> <?php the_time('l, F j, Y'); ?>
-								    </h1>
+									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-				    			<?php } elseif (is_month()) { ?>
-					    		    <h1 class="archive-title h2">
-						    	    	<span><?php _e("Monthly Archives:", "hacksawtheme"); ?></span> <?php the_time('F Y'); ?>
-							        </h1>
+									<?php the_excerpt(); ?>
 
-							    <?php } elseif (is_year()) { ?>
-							        <h1 class="archive-title h2">
-							    	    <span><?php _e("Yearly Archives:", "hacksawtheme"); ?></span> <?php the_time('Y'); ?>
-							        </h1>
-							    <?php } ?>
+								</section>
 
-							    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+								<footer class="article-footer">
 
-							    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+								</footer>
 
-								    <header class="article-header">
+							</article>
 
-									    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							<?php endwhile; ?>
 
-									    <p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <span class="amp">&amp;</span> <?php _e("filed under", "hacksawtheme"); ?> <?php the_category(', '); ?>.</p>
+									<?php bones_page_navi(); ?>
 
-								    </header> <!-- end article header -->
+							<?php else : ?>
 
-								    <section class="entry-content clearfix">
+									<article id="post-not-found" class="hentry cf">
+										<header class="article-header">
+											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+										</header>
+										<section class="entry-content">
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+										</section>
+										<footer class="article-footer">
+												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+										</footer>
+									</article>
 
-									    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+							<?php endif; ?>
 
-									    <?php the_excerpt(); ?>
+						</main>
 
-								    </section> <!-- end article section -->
+					<?php get_sidebar(); ?>
 
-								    <footer class="article-footer">
+				</div>
 
-								    </footer> <!-- end article footer -->
-
-							    </article> <!-- end article -->
-
-							    <?php endwhile; ?>
-
-							        <?php if (function_exists('bones_page_navi')) { ?>
-								        <?php bones_page_navi(); ?>
-							        <?php } else { ?>
-								        <nav class="wp-prev-next">
-									        <ul class="clearfix">
-										        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "hacksawtheme")) ?></li>
-										        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "hacksawtheme")) ?></li>
-									        </ul>
-							    	    </nav>
-							        <?php } ?>
-
-							    <?php else : ?>
-
-		    					    <article id="post-not-found" class="hentry clearfix">
-		    						    <header class="article-header">
-		    							    <h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
-		    					    	</header>
-		    						    <section class="entry-content">
-		    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
-		        						</section>
-		    	    					<footer class="article-footer">
-		    		    				    <p><?php _e("This is the error message in the archive.php template.", "hacksawtheme"); ?></p>
-		    			    			</footer>
-		    				    	</article>
-
-							    <?php endif; ?>
-
-		    				</div> <!-- end #main -->
-
-	    				</div><!--
-
-	    			 --><div class="grid__item lap--one-third desk--one-quarter">
-
-			    			<?php get_sidebar('blog-sidebar'); ?>
-
-	    				</div>
-
-					</div><!-- end .grid -->
-
-                </div> <!-- end #inner-content -->
-
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>

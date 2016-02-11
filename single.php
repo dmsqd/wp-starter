@@ -2,72 +2,53 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="inner-content wrap">
+				<div id="inner-content" class="wrap cf">
 
-					<div class="grid">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<div class="grid__item lap--two-thirds desk--three-quarters">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<div id="main" class="main clearfix" role="main">
+							<?php
+								/*
+								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
+								 *
+								 * So this function will bring in the needed template file depending on what the post
+								 * format is. The different post formats are located in the post-formats folder.
+								 *
+								 *
+								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
+								 * A SPECIFIC POST FORMAT.
+								 *
+								 * If you want to remove post formats, just delete the post-formats folder and
+								 * replace the function below with the contents of the "format.php" file.
+								*/
+								get_template_part( 'post-formats/format', get_post_format() );
+							?>
 
-								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php endwhile; ?>
 
-									<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<?php else : ?>
 
-										<header class="article-header">
+							<article id="post-not-found" class="hentry cf">
+									<header class="article-header">
+										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+									</header>
+									<section class="entry-content">
+										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+									</section>
+									<footer class="article-footer">
+											<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
+									</footer>
+							</article>
 
-											<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+						<?php endif; ?>
 
-											<p class="byline vcard"><?php _e("Posted", "hacksawtheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "hacksawtheme"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&amp;</span> <?php _e("filed under", "hacksawtheme"); ?> <?php the_category(', '); ?>.</p>
+					</main>
 
-										</header> <!-- end article header -->
+					<?php get_sidebar(); ?>
 
-										<section class="entry-content clearfix" itemprop="articleBody">
-											<?php the_content(); ?>
-										</section> <!-- end article section -->
+				</div>
 
-										<footer class="article-footer">
-
-											<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
-
-										</footer> <!-- end article footer -->
-
-										<?php comments_template(); ?>
-
-									</article> <!-- end article -->
-
-								<?php endwhile; ?>
-
-								<?php else : ?>
-
-									<article id="post-not-found" class="hentry clearfix">
-							    		<header class="article-header">
-							    			<h1><?php _e("Oops, Post Not Found!", "hacksawtheme"); ?></h1>
-							    		</header>
-							    		<section class="entry-content">
-							    			<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "hacksawtheme"); ?></p>
-							    		</section>
-							    		<footer class="article-footer">
-							    		    <p><?php _e("This is the error message in the single.php template.", "hacksawtheme"); ?></p>
-							    		</footer>
-									</article>
-
-								<?php endif; ?>
-
-							</div> <!-- end #main -->
-
-						</div><!--
-
-	    			 --><div class="grid__item lap--one-third desk--one-quarter">
-
-			    			<?php get_sidebar('blog-sidebar'); ?>
-
-	    				</div>
-
-					</div><!-- end .grid -->
-
-				</div> <!-- end #inner-content -->
-
-			</div> <!-- end #content -->
+			</div>
 
 <?php get_footer(); ?>
