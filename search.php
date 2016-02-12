@@ -53,6 +53,20 @@
 
                                 <?php bones_page_navi(); ?>
 
+                                <?php else: ?>
+
+                                    <header class="article-header">
+                                        <h1><?php _e( 'Sorry, No Results.', 'bonestheme' );?></h1>
+                                    </header>
+
+                                    <section class="entry-content">
+                                        <p><?php _e( 'Try your search again.', 'bonestheme' );?></p>
+                                    </section>
+
+                                    <section class="search">
+                                        <p><?php get_search_form(); ?></p>
+                                    </section> <!-- end search section -->
+
                                 <?php endif; ?>
 
                             </main>
