@@ -14,47 +14,59 @@
 
 <?php get_header(); ?>
 
-			<div id="content">
+            <div id="content" class="content">
 
-				<div id="inner-content" class="wrap cf">
+                <div id="inner-content" class="inner-content wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+                    <div class="grid">
 
-						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
+                        <div class="grid__item lap--two-thirds desk--three-quarters">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+                                <h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
-								<header class="article-header">
+                                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
-									?></p>
+                                <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-								</header>
+                                    <header class="article-header">
 
-								<section class="entry-content cf">
+                                        <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                                        <p class="byline vcard"><?php
+                                            printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
+                                        ?></p>
 
-									<?php the_excerpt(); ?>
+                                    </header>
 
-								</section>
+                                    <section class="entry-content cf">
 
-							</article>
+                                        <?php the_excerpt(); ?>
 
-							<?php endwhile; ?>
+                                    </section>
 
-							<?php bones_page_navi(); ?>
+                                </article>
 
-							<?php endif; ?>
+                                <?php endwhile; ?>
 
-						</main>
+                                <?php bones_page_navi(); ?>
 
-					<?php get_sidebar(); ?>
+                                <?php endif; ?>
 
-				</div>
+                            </main>
 
-			</div>
+                        </div><!--
+
+                     --><div class="grid__item lap--one-third desk--one-quarter">
+
+                            <?php get_sidebar(); ?>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 <?php get_footer(); ?>

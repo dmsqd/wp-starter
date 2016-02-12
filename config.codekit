@@ -112,6 +112,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/library\/css\/admin.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/css\/admin.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/library\/css\/editor-style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -241,23 +250,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/library\/js\/min\/scripts.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/js\/min\/scripts.min.js",
+		"outputAbbreviatedPath": "\/library\/js\/min\/min\/scripts.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/library\/js\/scripts.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/library\/js\/scripts.js",
 		"outputAbbreviatedPath": "\/library\/js\/min\/scripts.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/library\/js\/scripts.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/js\/scripts.min.js",
-		"outputAbbreviatedPath": "\/library\/js\/min\/scripts.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -277,87 +286,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/breakpoints\/_1030up.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_1030up.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_1030up.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/breakpoints\/_1240up.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_1240up.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_1240up.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/breakpoints\/_2x.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_2x.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_2x.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/breakpoints\/_481up.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_481up.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_481up.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/breakpoints\/_768up.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_768up.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_768up.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/breakpoints\/_base.scss": {
 		"createSourceMap": 0,
@@ -373,7 +302,71 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
+		},
+	"\/library\/scss\/breakpoints\/_content.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_content.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_content.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/library\/scss\/breakpoints\/_footer.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_footer.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_footer.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/library\/scss\/breakpoints\/_header.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_header.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_header.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/library\/scss\/breakpoints\/_wordpress.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/breakpoints\/_wordpress.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_wordpress.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
 		},
 	"\/library\/scss\/editor-style.scss": {
 		"createSourceMap": 0,
@@ -389,7 +382,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/editor.scss": {
 		"createSourceMap": 0,
@@ -405,7 +398,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/ie.scss": {
 		"createSourceMap": 0,
@@ -421,7 +414,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/login.scss": {
 		"createSourceMap": 0,
@@ -437,7 +430,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/modules\/_alerts.scss": {
 		"createSourceMap": 0,
@@ -453,7 +446,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/modules\/_buttons.scss": {
 		"createSourceMap": 0,
@@ -469,7 +462,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/modules\/_forms.scss": {
 		"createSourceMap": 0,
@@ -485,7 +478,39 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
+		},
+	"\/library\/scss\/modules\/_headings.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/modules\/_headings.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_headings.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/library\/scss\/modules\/_navigation.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/modules\/_navigation.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_navigation.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
 		},
 	"\/library\/scss\/partials\/_functions.scss": {
 		"createSourceMap": 0,
@@ -501,7 +526,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/partials\/_grid.scss": {
 		"createSourceMap": 0,
@@ -517,39 +542,39 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
-	"\/library\/scss\/partials\/_ie_grid.scss": {
+	"\/library\/scss\/partials\/_links.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/partials\/_ie_grid.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_ie_grid.css",
+		"inputAbbreviatedPath": "\/library\/scss\/partials\/_links.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_links.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
-	"\/library\/scss\/partials\/_mixins.scss": {
+	"\/library\/scss\/partials\/_mq.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/partials\/_mixins.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_mixins.css",
+		"inputAbbreviatedPath": "\/library\/scss\/partials\/_mq.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_mq.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/partials\/_normalize.scss": {
 		"createSourceMap": 0,
@@ -565,7 +590,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/partials\/_print.scss": {
 		"createSourceMap": 0,
@@ -581,7 +606,23 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
+		},
+	"\/library\/scss\/partials\/_settings.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/partials\/_settings.scss",
+		"outputAbbreviatedPath": "\/library\/scss\/css\/_settings.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
 		},
 	"\/library\/scss\/partials\/_typography.scss": {
 		"createSourceMap": 0,
@@ -597,23 +638,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
-		},
-	"\/library\/scss\/partials\/_variables.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/library\/scss\/partials\/_variables.scss",
-		"outputAbbreviatedPath": "\/library\/scss\/css\/_variables.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/library\/scss\/style.scss": {
 		"createSourceMap": 0,
@@ -629,7 +654,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
-		"useLibsass": 1
+		"useLibsass": 0
 		},
 	"\/page-fullwidth.php": {
 		"fileType": 8192,
@@ -1450,7 +1475,7 @@
 	"sassDebugStyle": 0,
 	"sassDecimalPrecision": 5,
 	"sassOutputStyle": 3,
-	"sassUseLibsass": 1,
+	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 1,
 	"shouldRunBless": 1,
 	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs",

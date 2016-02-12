@@ -17,43 +17,56 @@
 
 <?php get_header(); ?>
 
-			<div id="content">
+            <div id="content" class="content">
 
-				<div id="inner-content" class="wrap cf">
+                <div id="inner-content" class="inner-content wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+                    <div class="grid">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class="grid__item lap--two-thirds desk--three-quarters">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+                            <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-								<header class="article-header">
+                                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
-									?></p>
+                                <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
-								</header>
+                                    <header class="article-header">
 
-								<section class="entry-content cf">
-									<?php the_content(); ?>
-								</section> <!-- end article section -->
+                                        <h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
 
-								<?php //comments_template(); ?>
+                                        <p class="byline vcard"><?php
+                                            printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
+                                        ?></p>
 
-							</article>
+                                    </header>
 
-							<?php endwhile; ?>
+                                    <section class="entry-content cf">
+                                        <?php the_content(); ?>
+                                    </section> <!-- end article section -->
 
-							<?php endif; ?>
+                                    <?php //comments_template(); ?>
 
-						</main>
+                                </article>
 
-						<?php get_sidebar(); ?>
+                                <?php endwhile; ?>
 
-				</div>
+                                <?php endif; ?>
 
-			</div>
+                            </main>
+
+                        </div><!--
+
+                     --><div class="grid__item lap--one-third desk--one-quarter">
+
+                            <?php get_sidebar(); ?>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 <?php get_footer(); ?>

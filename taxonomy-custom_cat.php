@@ -14,50 +14,59 @@
 
 <?php get_header(); ?>
 
-			<div id="content">
+            <div id="content" class="content">
 
-				<div id="inner-content" class="wrap cf">
+                <div id="inner-content" class="inner-content wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+                    <div class="grid">
 
-							<h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?></h1>
+                        <div class="grid__item lap--two-thirds desk--three-quarters">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+                                <h1 class="archive-title h2"><span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?></h1>
 
-								<header class="article-header">
+                                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf(__('Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "", ", ", "" ));
-									?></p>
+                                <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-								</header>
+                                    <header class="article-header">
 
-								<section class="entry-content">
-									<?php the_excerpt( '<span class="read-more">' . __( 'Read More &raquo;', 'bonestheme' ) . '</span>' ); ?>
+                                        <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-								</section>
+                                        <p class="byline vcard"><?php
+                                            printf(__('Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link(), get_the_term_list( get_the_ID(), 'custom_cat', "", ", ", "" ));
+                                        ?></p>
 
-								<footer class="article-footer">
+                                    </header>
 
-								</footer>
+                                    <section class="entry-content">
+                                        <?php the_excerpt( '<span class="read-more">' . __( 'Read More &raquo;', 'bonestheme' ) . '</span>' ); ?>
 
-							</article>
+                                    </section>
 
-							<?php endwhile; ?>
+                                </article>
 
-							<?php bones_page_navi(); ?>
+                                <?php endwhile; ?>
 
-							<?php endif; ?>
+                                <?php bones_page_navi(); ?>
 
-						</main>
+                                <?php endif; ?>
 
-						<?php get_sidebar(); ?>
+                            </main>
 
-				</div>
+                        </div><!--
 
-			</div>
+                     --><div class="grid__item lap--one-third desk--one-quarter">
+
+                            <?php get_sidebar(); ?>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 <?php get_footer(); ?>

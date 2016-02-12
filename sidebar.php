@@ -1,13 +1,13 @@
-				<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+                <div id="sidebar1" class="sidebar cf" role="complementary">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+                    <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+                        <?php dynamic_sidebar( 'sidebar1' ); ?>
 
-					<?php else : ?>
+                    <?php else : ?>
 
-						<!-- There are no widgets defined in the backend. -->
+                        <!-- There are no widgets defined in the backend. -->
 
-					<?php endif; ?>
+                    <?php endif; ?>
 
-				</div>
+                </div>

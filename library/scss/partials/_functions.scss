@@ -1,6 +1,6 @@
 /******************************************************************
 Site Name:
-Author:
+Author: Hacksaw
 
 Stylesheet: Sass Functions
 
@@ -39,28 +39,22 @@ box-shadow: 0 0 4px rgba(0,0,0,0.3);
     @return rgba(255,255,255,$opacity);
 }
 
-
-/*********************
-RESPONSIVE HELPER FUNCTION
-If you're creating a responsive site, then
-you've probably already read
-Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
-
-Here's a nice little helper function for calculating
-target / context
-as mentioned in that book.
-
-Example:
-width: cp(650px, 1000px);
-or
-width: calc-percent(650px, 1000px);
-both compile to:
-width: 65%;
-*********************/
-
-@function calc-percent($target, $container) {
-  @return ($target / $container) * 100%;
+/**
+ * Replace an image
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ */
+@mixin image-replacement {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
-@function cp($target, $container) {
-  @return calc-percent($target, $container);
+
+@mixin inline-block($minHeight: null) {
+    display:inline-block;
+    *zoom:1;
+    *display:inline;
+    @if $minHeight != null {
+        *min-height: $minHeight;
+        _height: $minHeight;
+    }
 }

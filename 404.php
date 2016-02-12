@@ -1,37 +1,45 @@
 <?php get_header(); ?>
 
-			<div id="content">
+            <div id="content" class="content">
 
-				<div id="inner-content" class="wrap cf">
+                <div id="inner-content" class="inner-content wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+                    <div class="grid">
 
-						<article id="post-not-found" class="hentry cf">
+                        <div class="grid__item lap--two-thirds desk--three-quarters">
 
-							<header class="article-header">
+                            <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-								<h1><?php _e( 'Page Not Found', 'bonestheme' ); ?></h1>
+                                <article id="post-not-found" class="hentry cf">
 
-							</header>
+                                    <header class="article-header">
 
-							<section class="entry-content">
+                                        <h1><?php _e( 'Page Not Found', 'bonestheme' ); ?></h1>
 
-								<p><?php _e( 'Sorry, the page you were looking for does not exist.', 'bonestheme' ); ?></p>
+                                    </header>
 
-							</section>
+                                    <section class="entry-content">
 
-							<section class="search">
+                                        <p><?php _e( 'Sorry, the page you were looking for does not exist.', 'bonestheme' ); ?></p>
 
-									<p><?php get_search_form(); ?></p>
+                                    </section>
 
-							</section>
+                                    <section class="search">
 
-						</article>
+                                        <p><?php get_search_form(); ?></p>
 
-					</main>
+                                    </section>
 
-				</div>
+                                </article>
 
-			</div>
+                            </main>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
 <?php get_footer(); ?>
