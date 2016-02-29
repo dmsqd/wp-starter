@@ -6,7 +6,7 @@
 
                     <div class="grid">
 
-                        <div class="grid__item lap--two-thirds desk--three-quarters">
+                        <div class="grid__item one-whole lap--two-thirds desk--three-quarters">
 
                             <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 

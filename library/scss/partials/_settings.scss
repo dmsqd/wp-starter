@@ -28,15 +28,11 @@ $gray:              #eaedf2;
 $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
 
-$tan:               #eceee5;
+$primary:           #f01d4f;
+$secondary:         #2980b9;
 
-$green:             #7dd667;
-
-$bones-pink:        #f01d4f;
-$blue:              #2980b9;
-
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$link-color:        $primary;
+$link-hover:        darken($secondary, 9%);
 
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
@@ -45,35 +41,22 @@ $disabled-gray:     #cfcfcf;
 BREAKPOINTS
 *********************/
 
-// To enable support for browsers that do not support @media queries,
-// (IE <= 8, Firefox <= 3, Opera <= 9) set $mq-responsive to false
-// Create a separate stylesheet served exclusively to these browsers,
-// meaning @media queries will be rasterized, relying on the cascade itself
+
 $mq-responsive: true;
 
-// Name your breakpoints in a way that creates a ubiquitous language
-// across team members. It will improve communication between
-// stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
-    mobile:  320px,
-    tablet:  740px,
-    desktop: 980px,
-    wide:    1300px,
-
-    // Tweakpoints
-    desktopAd: 810px,
-    mobileLandscape: 480px
+    small-palm:     480px,
+    palm:           767px,
+    portrait-tab:   1023px,
+    tab:            1279px,
+    lap:            1439px,
+    desk:           1440px,
 );
 
-// Define the breakpoint from the $mq-breakpoints list that should
-// be used as the target width when outputting a static stylesheet
-// (i.e. when $mq-responsive is set to 'false').
 $mq-static-breakpoint: desktop;
 
-// If you want to display the currently active breakpoint in the top
-// right corner of your site during development, add the breakpoints
-// to this list, ordered by width, e.g. (mobile, tablet, desktop).
-// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+// Display breakpoint in top right corner
+// $mq-show-breakpoints: (small-palm, palm, portrait-tab, tab, lap, desk);
 
 /*********************
 FONTS
@@ -84,37 +67,64 @@ $body-font:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:            "Georgia", Cambria, Times New Roman, Times, serif;
 
 // Used by typography.scss
-// TODO: integrate with mq breakpoints
 $font-breakpoints: (
 
-    small: (
+    small-palm: (
         start: 0,
-        end: 500
+        end: 480
     ),
 
-    base: (
-        start: 500,
-        end: 769
+    palm: (
+        start: 481,
+        end: 768
     ),
 
-    mid: (
+    portrait-tab: (
         start: 770,
         end: 1023
     ),
 
-    large: (
+    tab: (
         start: 1024,
-        end: 1281
+        end: 1279
     ),
 
-    x-large: (
-        start: 1281,
-        end: 1500
+    lap: (
+        start: 1280,
+        end: 1439
     ),
 
-    x-x-large: (
-        start: 1501,
+    desk: (
+        start: 1440,
         end: 20000
     ),
 
 );
+
+
+/*********************
+GRID
+*********************/
+
+small-palm:     480px,
+palm:           767px,
+portrait-tab:   1023px,
+tab:            1279px,
+lap:            1439px,
+desk:           1440px,
+
+
+$breakpoints: (
+    'small-palm' '(max-width: 480px)',
+    'palm' '(min-width: 481px) and (max-width: 767px)',
+    'portrait-tab' '(min-width: 768px) and (max-width: 1023px)',
+    'tab' '(min-width: 1024px) and (max-width: 1279px)',
+    'lap' '(min-width: 1280px) and (max-width: 1439px)',
+    'desk' '(max-width: 1440px)'
+)!default;
+
+
+$breakpoint-has-widths: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
+// $breakpoint-has-push: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
+// $breakpoint-has-pull: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
+

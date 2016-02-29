@@ -23,7 +23,7 @@
 
                     <div class="grid">
 
-                        <div class="grid__item lap--two-thirds desk--three-quarters">
+                        <div class="grid__item one-whole lap--two-thirds desk--three-quarters">
 
                             <main id="main" class="main cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -57,7 +57,7 @@
 
                         </div><!--
 
-                     --><div class="grid__item lap--one-third desk--one-quarter">
+                     --><div class="grid__item one-whole lap--one-third desk--one-quarter">
 
                             <?php get_sidebar(); ?>
 
