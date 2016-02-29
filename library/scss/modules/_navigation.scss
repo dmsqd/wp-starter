@@ -78,7 +78,7 @@ and more scalable.
 
     }  /* end current highlighters */
 
-    @include mq($from: tablet) {
+    @include mq($from: tab) {
 
         border: 0;
         ul {
