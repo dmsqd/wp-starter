@@ -106,14 +106,6 @@ $font-breakpoints: (
 GRID
 *********************/
 
-small-palm:     480px,
-palm:           767px,
-portrait-tab:   1023px,
-tab:            1279px,
-lap:            1439px,
-desk:           1440px,
-
-
 $breakpoints: (
     'small-palm' '(max-width: 480px)',
     'palm' '(min-width: 481px) and (max-width: 767px)',
