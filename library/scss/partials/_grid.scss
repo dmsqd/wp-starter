@@ -267,7 +267,7 @@ $class-type:            unquote(".");
         direction:rtl;
         text-align:left;
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             direction:ltr;
             text-align:left;
         }
@@ -281,7 +281,7 @@ $class-type:            unquote(".");
     #{$class-type}#{$namespace}grid--full{
         margin-left:0;
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             padding-left:0;
         }
     }
@@ -293,7 +293,7 @@ $class-type:            unquote(".");
     #{$class-type}#{$namespace}grid--right{
         text-align:right;
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             text-align:left;
         }
     }
@@ -306,7 +306,7 @@ $class-type:            unquote(".");
     #{$class-type}#{$namespace}grid--center{
         text-align:center;
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             text-align:left;
         }
     }
@@ -318,14 +318,14 @@ $class-type:            unquote(".");
      */
     #{$class-type}#{$namespace}grid--middle{
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             vertical-align:middle;
         }
     }
 
     #{$class-type}#{$namespace}grid--bottom{
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             vertical-align:bottom;
         }
     }
@@ -337,7 +337,7 @@ $class-type:            unquote(".");
     #{$class-type}#{$namespace}grid--narrow{
         margin-left:-($gutter / 2);
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             padding-left:$gutter / 2;
         }
     }
@@ -349,7 +349,7 @@ $class-type:            unquote(".");
     #{$class-type}#{$namespace}grid--wide{
         margin-left:-($gutter * 2);
 
-        > #{$class-type}#{$namespace}grid__item{
+        > .grid__item{
             padding-left:$gutter * 2;
         }
     }
