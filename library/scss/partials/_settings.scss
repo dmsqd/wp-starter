@@ -113,10 +113,13 @@ $breakpoints: (
     'tab' '(min-width: 1024px) and (max-width: 1279px)',
     'lap' '(min-width: 1280px) and (max-width: 1439px)',
     'desk' '(max-width: 1440px)'
-)!default;
+);
 
+$breakpoint-has-widths: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk');
 
-$breakpoint-has-widths: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
-// $breakpoint-has-push: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
-// $breakpoint-has-pull: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk')!default;
+// enable push/pull classes
+$pull: false;
+$push: false;
+// $breakpoint-has-push: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk');
+// $breakpoint-has-pull: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk');
 
