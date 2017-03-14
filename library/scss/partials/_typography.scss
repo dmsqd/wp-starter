@@ -1,4 +1,4 @@
-/******************************************************************
+]/******************************************************************
 Site Name:
 Author: Hacksaw
 
@@ -71,27 +71,27 @@ $fontlist: (
 
     leonardo: (
 
-        small: (
+        small-palm: (
             font-size: 40px,
         ),
 
-        base: (
+        palm: (
             font-size: 40px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 50px,
         ),
 
-        large: (
+        tab: (
             font-size: 55px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 64px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 72px,
         )
 
@@ -99,27 +99,27 @@ $fontlist: (
 
     vincent: (
 
-        small: (
+        small-palm: (
             font-size: 25px,
         ),
 
-        base: (
+        palm: (
             font-size: 25px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 30px,
         ),
 
-        large: (
+        tab: (
             font-size: 30px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 45px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 48px,
         )
 
@@ -128,27 +128,27 @@ $fontlist: (
     rembrandt: (
 
 
-        small: (
+        small-palm: (
             font-size: 26px,
         ),
 
-        base: (
+        palm: (
             font-size: 26px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 26px,
         ),
 
-        large: (
+        tab: (
             font-size: 26px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 26px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 26px,
         )
 
@@ -157,27 +157,27 @@ $fontlist: (
 
     michelangelo: (
 
-        small: (
+        small-palm: (
             font-size: 20px,
         ),
 
-        base: (
+        palm: (
             font-size: 20px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 25px,
         ),
 
-        large: (
+        tab: (
             font-size: 25px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 34px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 38px,
         )
 
@@ -185,25 +185,27 @@ $fontlist: (
 
     monet: (
 
-        small: (
-            font-size: 18px,
-        ),
-        base: (
+        small-palm: (
             font-size: 18px,
         ),
 
-        mid: (
+        palm: (
             font-size: 18px,
         ),
 
-        large: (
-            font-size: 18px,
-        ),
-        x-large: (
+        portrait-tab: (
             font-size: 18px,
         ),
 
-        x-x-large: (
+        tab: (
+            font-size: 18px,
+        ),
+
+        lap: (
+            font-size: 18px,
+        ),
+
+        desk: (
             font-size: 18px,
         )
 
@@ -212,27 +214,27 @@ $fontlist: (
 
     picasso: (
 
-        small: (
+        small-palm: (
             font-size: 22px,
         ),
 
-        base: (
+        palm: (
             font-size: 22px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 22px,
         ),
 
-        large: (
+        tab: (
             font-size: 22px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 22px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 22px,
         )
 
@@ -240,47 +242,54 @@ $fontlist: (
 
     raphael: (
 
-        small: (
+        small-palm: (
             font-size: 24px,
         ),
-        base: (
+
+        palm: (
             font-size: 24px,
         ),
-        mid: (
+
+        portrait-tab: (
             font-size: 24px,
         ),
-        large: (
+
+        tab: (
             font-size: 24px,
         ),
-        x-large: (
+
+        lap: (
             font-size: 24px,
         ),
-        x-x-large: (
+
+        desk: (
             font-size: 24px,
         )
     ),
 
     renoir: (
 
-        small: (
+        small-palm: (
             font-size: 22px
-        ),1em
-        base: (
+        ),
+
+        palm: (
             font-size: 22px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 22px,
         ),
 
-        large: (
+        tab: (
             font-size: 22px
-        ),1em
-        x-large: (
+        ),
+
+        lap: (
             font-size: 22px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 22px,
         )
 
@@ -288,23 +297,27 @@ $fontlist: (
 
     banksy: (
 
-        small: (
+        small-palm: (
             font-size: 22px
-        ),1em
-        base: (
+        ),
+
+        palm: (
             font-size: 22px
-        ),1em
-        mid: (
+        ),
+
+        portrait-tab: (
             font-size: 22px
-        ),1em
-        large: (
+        ),
+
+        tab: (
             font-size: 22px
-        ),1em
-        x-large: (
+        ),
+
+        lap: (
             font-size: 22px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 22px,
         )
 
@@ -313,49 +326,55 @@ $fontlist: (
 
     vermeer: (
 
-        small: (
+        small-palm: (
             font-size: 22px
-        ),1em
-        base: (
+        ),
+
+        palm: (
             font-size: 22px
-        ),1em
-        mid: (
+        ),
+
+        portrait-tab: (
             font-size: 22px
-        ),1em
-        large: (
+        ),
+
+        tab: (
             font-size: 22px
-        ),1em
-        x-large: (
+        ),
+
+        lap: (
             font-size: 22px
-        ),1em
-        x-x-large: (
+        ),
+
+        desk: (
             font-size: 22px
-        )1em
+        )
+
     ),
 
     cezanne: (
 
-        small: (
+        small-palm: (
             font-size: 22px,
         ),
 
-        base: (
+        palm: (
             font-size: 22px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 22px,
         ),
 
-        large: (
+        tab: (
             font-size: 22px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 22px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 22px,
         )
 
@@ -364,27 +383,27 @@ $fontlist: (
 
     daniel: (
 
-        small: (
+        small-palm: (
             font-size: 22px,
         ),
 
-        base: (
+        palm: (
             font-size: 22px,
         ),
 
-        mid: (
+        portrait-tab: (
             font-size: 22px,
         ),
 
-        large: (
+        tab: (
             font-size: 22px,
         ),
 
-        x-large: (
+        lap: (
             font-size: 22px,
         ),
 
-        x-x-large: (
+        desk: (
             font-size: 22px,
         )
 
