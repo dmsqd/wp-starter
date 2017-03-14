@@ -1,11 +1,4 @@
 <?php
-/*
-Author: Hacksaw
-URL: htp://hacksawstudio.com/
-
-This is where you create new social links, new custom fields for company details, and image changes.
-*/
-
 /****************** WORDPRESS SOCIAL LINKS CONTROL ******************/
 
 add_action( 'customize_register', 'dm2_customize_register' );
@@ -13,17 +6,17 @@ function dm2_customize_register($wp_customize) {
 
     // SECTION
     $wp_customize->add_section( 'social_links' , array(
-        'title'      => __('Social Links','hacksawtheme'),
+        'title'      => __('Social Links','wp-starter'),
         'priority'   => 40,
     ) );
 
     $social = array(
-        array( 'slug' => 'facebook_url', 'default' => '', 'label' => __( 'Facebook Url', 'hacksawtheme' ) ),
-        array( 'slug' => 'twitter_url', 'default' => '', 'label' => __( 'Twitter Url', 'hacksawtheme' ) ),
-        array( 'slug' => 'linkedin_url', 'default' => '', 'label' => __( 'LinkedIn Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'googleplus_url', 'default' => '', 'label' => __( 'Google Plus Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'tumblr_url', 'default' => '', 'label' => __( 'Tumblr Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'instagram_url', 'default' => '', 'label' => __( 'Instagram Url', 'hacksawtheme' ) ),
+        array( 'slug' => 'facebook_url', 'default' => '', 'label' => __( 'Facebook Url', 'wp-starter' ) ),
+        array( 'slug' => 'twitter_url', 'default' => '', 'label' => __( 'Twitter Url', 'wp-starter' ) ),
+        array( 'slug' => 'linkedin_url', 'default' => '', 'label' => __( 'LinkedIn Url', 'wp-starter' ) ),
+        // array( 'slug' => 'googleplus_url', 'default' => '', 'label' => __( 'Google Plus Url', 'wp-starter' ) ),
+        // array( 'slug' => 'tumblr_url', 'default' => '', 'label' => __( 'Tumblr Url', 'wp-starter' ) ),
+        // array( 'slug' => 'instagram_url', 'default' => '', 'label' => __( 'Instagram Url', 'wp-starter' ) ),
     );
 
     foreach( $social as $socials ) {
@@ -43,19 +36,19 @@ function content_customize_register($wp_customize) {
 
     // SECTION
     $wp_customize->add_section( 'contact_details', array(
-        'title'      => __('Contact Details','hacksawtheme'),
+        'title'      => __('Contact Details','wp-starter'),
         'priority'   => 30,
     ) );
 
     $contacts = array(
-        array( 'slug' => 'company_name', 'default' => '', 'label' => __( 'Company Name', 'hacksawtheme' ) ),
-        array( 'slug' => 'phone', 'default' => '', 'label' => __( 'Phone Number', 'hacksawtheme' ) ),
-        array( 'slug' => 'email', 'default' => '', 'label' => __( 'Email Address', 'hacksawtheme' ) ),
-        array( 'slug' => 'address', 'default' => '', 'label' => __( 'Company Address', 'hacksawtheme' ) ),
-        array( 'slug' => 'postcode', 'default' => '', 'label' => __( 'Company Postcode', 'hacksawtheme' ) ),
-        // array( 'slug' => 'fax', 'default' => '', 'label' => __( 'Fax Number', 'hacksawtheme' ) ),
-        // array( 'slug' => 'company_number', 'default' => '', 'label' => __( 'Company Reg Number', 'hacksawtheme' ) ),
-        // array( 'slug' => 'vat_number', 'default' => '', 'label' => __( 'VAT Number', 'hacksawtheme' ) ),
+        array( 'slug' => 'company_name', 'default' => '', 'label' => __( 'Company Name', 'wp-starter' ) ),
+        array( 'slug' => 'phone', 'default' => '', 'label' => __( 'Phone Number', 'wp-starter' ) ),
+        array( 'slug' => 'email', 'default' => '', 'label' => __( 'Email Address', 'wp-starter' ) ),
+        array( 'slug' => 'address', 'default' => '', 'label' => __( 'Company Address', 'wp-starter' ) ),
+        array( 'slug' => 'postcode', 'default' => '', 'label' => __( 'Company Postcode', 'wp-starter' ) ),
+        // array( 'slug' => 'fax', 'default' => '', 'label' => __( 'Fax Number', 'wp-starter' ) ),
+        // array( 'slug' => 'company_number', 'default' => '', 'label' => __( 'Company Reg Number', 'wp-starter' ) ),
+        // array( 'slug' => 'vat_number', 'default' => '', 'label' => __( 'VAT Number', 'wp-starter' ) ),
     );
 
     foreach( $contacts as $contact ) {

@@ -44,7 +44,7 @@ Template Name: Full Width Page
                                          *
                                         */
                                         wp_link_pages( array(
-                                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
+                                            'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wp-starter' ) . '</span>',
                                             'after'       => '</div>',
                                             'link_before' => '<span>',
                                             'link_after'  => '</span>',
