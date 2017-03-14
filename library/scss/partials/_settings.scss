@@ -112,7 +112,7 @@ $breakpoints: (
     'portrait-tab' '(min-width: 768px) and (max-width: 1023px)',
     'tab' '(min-width: 1024px) and (max-width: 1279px)',
     'lap' '(min-width: 1280px) and (max-width: 1439px)',
-    'desk' '(max-width: 1440px)'
+    'desk' '(min-width: 1440px)'
 );
 
 $breakpoint-has-widths: ('small-palm', 'palm', 'portrait-tab', 'tab', 'lap', 'desk');
