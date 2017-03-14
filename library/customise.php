@@ -18,12 +18,12 @@ function dm2_customize_register($wp_customize) {
     ) );
 
     $social = array(
-        array( 'slug' => 'facebook_url', 'label' => __( 'Facebook Url', 'hacksawtheme' ) ),
-        array( 'slug' => 'twitter_url', 'label' => __( 'Twitter Url', 'hacksawtheme' ) ),
-        array( 'slug' => 'linkedin_url', 'label' => __( 'LinkedIn Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'googleplus_url', 'label' => __( 'Google Plus Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'tumblr_url', 'label' => __( 'Tumblr Url', 'hacksawtheme' ) ),
-        // array( 'slug' => 'instagram_url', 'label' => __( 'Instagram Url', 'hacksawtheme' ) ),
+        array( 'slug' => 'facebook_url', 'default' => '', 'label' => __( 'Facebook Url', 'hacksawtheme' ) ),
+        array( 'slug' => 'twitter_url', 'default' => '', 'label' => __( 'Twitter Url', 'hacksawtheme' ) ),
+        array( 'slug' => 'linkedin_url', 'default' => '', 'label' => __( 'LinkedIn Url', 'hacksawtheme' ) ),
+        // array( 'slug' => 'googleplus_url', 'default' => '', 'label' => __( 'Google Plus Url', 'hacksawtheme' ) ),
+        // array( 'slug' => 'tumblr_url', 'default' => '', 'label' => __( 'Tumblr Url', 'hacksawtheme' ) ),
+        // array( 'slug' => 'instagram_url', 'default' => '', 'label' => __( 'Instagram Url', 'hacksawtheme' ) ),
     );
 
     foreach( $social as $socials ) {
@@ -48,14 +48,14 @@ function content_customize_register($wp_customize) {
     ) );
 
     $contacts = array(
-        array( 'slug' => 'company_name', 'label' => __( 'Company Name', 'hacksawtheme' ) ),
-        array( 'slug' => 'phone', 'label' => __( 'Phone Number', 'hacksawtheme' ) ),
-        array( 'slug' => 'email', 'label' => __( 'Email Address', 'hacksawtheme' ) ),
-        array( 'slug' => 'address', 'label' => __( 'Company Address', 'hacksawtheme' ) ),
-        array( 'slug' => 'postcode', 'label' => __( 'Company Postcode', 'hacksawtheme' ) ),
-        // array( 'slug' => 'fax', 'label' => __( 'Fax Number', 'hacksawtheme' ) ),
-        // array( 'slug' => 'company_number', 'label' => __( 'Company Reg Number', 'hacksawtheme' ) ),
-        // array( 'slug' => 'vat_number', 'label' => __( 'VAT Number', 'hacksawtheme' ) ),
+        array( 'slug' => 'company_name', 'default' => '', 'label' => __( 'Company Name', 'hacksawtheme' ) ),
+        array( 'slug' => 'phone', 'default' => '', 'label' => __( 'Phone Number', 'hacksawtheme' ) ),
+        array( 'slug' => 'email', 'default' => '', 'label' => __( 'Email Address', 'hacksawtheme' ) ),
+        array( 'slug' => 'address', 'default' => '', 'label' => __( 'Company Address', 'hacksawtheme' ) ),
+        array( 'slug' => 'postcode', 'default' => '', 'label' => __( 'Company Postcode', 'hacksawtheme' ) ),
+        // array( 'slug' => 'fax', 'default' => '', 'label' => __( 'Fax Number', 'hacksawtheme' ) ),
+        // array( 'slug' => 'company_number', 'default' => '', 'label' => __( 'Company Reg Number', 'hacksawtheme' ) ),
+        // array( 'slug' => 'vat_number', 'default' => '', 'label' => __( 'VAT Number', 'hacksawtheme' ) ),
     );
 
     foreach( $contacts as $contact ) {
